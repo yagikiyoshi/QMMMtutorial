@@ -1,0 +1,252 @@
+****************************************************
+*                                                  *
+*                 PATHCV_ANALYSIS                  *
+*                                                  *
+*        Utility to analyze trajectory files       *
+*                                                  *
+*              Developed by RIKEN AICS             *
+*                                                  *
+****************************************************
+ 
+[STEP1] Read Control Parameters for Analysis
+ 
+Read_Ctrl_Input> Input Files
+  cvfile          = equil2_{}.dis
+  pathfile        = ../2.window/win_rr.dat
+ 
+Read_Ctrl_Output> Output Files
+  pathcvfile      = equil2_{}.pathcv
+ 
+Read_Ctrl_Trajectory> Parameters of Trajectory
+  # of trj files  =          0
+  trj format      = DCD       
+  trj type        =   COOR+BOX
+ 
+Read_Ctrl_Option> Parameters of OPTION
+
+  check only      = no
+  trajectory      = no
+     nreplica     =         21
+
+[STEP2] Set Relevant Variables and Structures
+ 
+[STEP3] Analysis trajectory files
+ 
+Read_Data> 
+  file name = ../2.window/win_rr.dat
+    # of dimension : 5
+    # of steps     : 21
+
+Read_Data> 
+  file name = equil2_1.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     1.19370 Std     0.24329
+Distance : Ave     0.00924 Std     0.00870
+Read_Data> 
+  file name = equil2_2.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     1.91356 Std     0.55321
+Distance : Ave     0.00988 Std     0.00831
+Read_Data> 
+  file name = equil2_3.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     2.84872 Std     0.47463
+Distance : Ave     0.00895 Std     0.00635
+Read_Data> 
+  file name = equil2_4.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     3.74086 Std     0.76285
+Distance : Ave     0.01092 Std     0.00706
+Read_Data> 
+  file name = equil2_5.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     4.73401 Std     0.45389
+Distance : Ave     0.01102 Std     0.00870
+Read_Data> 
+  file name = equil2_6.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     5.66370 Std     0.39780
+Distance : Ave     0.00659 Std     0.00598
+Read_Data> 
+  file name = equil2_7.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     6.75606 Std     0.47943
+Distance : Ave     0.00923 Std     0.00749
+Read_Data> 
+  file name = equil2_8.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     7.58647 Std     0.57178
+Distance : Ave     0.00689 Std     0.00604
+Read_Data> 
+  file name = equil2_9.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     8.63804 Std     0.61953
+Distance : Ave     0.01242 Std     0.00839
+Read_Data> 
+  file name = equil2_10.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     9.55286 Std     0.36142
+Distance : Ave     0.01049 Std     0.00817
+Read_Data> 
+  file name = equil2_11.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    10.50694 Std     0.45155
+Distance : Ave     0.00795 Std     0.00732
+Read_Data> 
+  file name = equil2_12.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    11.24507 Std     0.67532
+Distance : Ave     0.01053 Std     0.00759
+Read_Data> 
+  file name = equil2_13.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    12.00312 Std     0.40304
+Distance : Ave     0.00837 Std     0.00688
+Read_Data> 
+  file name = equil2_14.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    13.46478 Std     0.79163
+Distance : Ave     0.00888 Std     0.00604
+Read_Data> 
+  file name = equil2_15.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    15.29226 Std     0.56351
+Distance : Ave     0.00735 Std     0.00560
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Read_Data> 
+  file name = equil2_16.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    16.52224 Std     0.63210
+Distance : Ave     0.00967 Std     0.00810
+Read_Data> 
+  file name = equil2_17.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    17.55506 Std     0.53993
+Distance : Ave     0.01105 Std     0.00688
+Read_Data> 
+  file name = equil2_18.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    18.43117 Std     0.49676
+Distance : Ave     0.00832 Std     0.00696
+Read_Data> 
+  file name = equil2_19.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    19.24778 Std     0.49066
+Distance : Ave     0.01156 Std     0.00955
+Read_Data> 
+  file name = equil2_20.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    20.03687 Std     0.52630
+Distance : Ave     0.01446 Std     0.01046
+Read_Data> 
+  file name = equil2_21.dis
+    # of dimension : 5
+    # of steps     : 80
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    20.75229 Std     0.33255
+Distance : Ave     0.01299 Std     0.00825
+[STEP4] Deallocate memory
+ 

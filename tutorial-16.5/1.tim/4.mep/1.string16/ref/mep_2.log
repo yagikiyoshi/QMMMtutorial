@@ -1,0 +1,939 @@
+INFO:       STEP   POTENTIAL_ENE            RMSG            MAXG            BOND           ANGLE    UREY-BRADLEY        DIHEDRAL        IMPROPER            CMAP         VDWAALS           ELECT              QM
+ --------------- --------------- --------------- --------------- ---------------
+INFO:          0   -1006332.2087          0.0000          0.0000       1497.8490       3743.5316        459.2456       4476.3220        271.2789       -186.0190       7155.0481    -117215.5549    -906533.9101
+
+Iter.     1
+
++++++ Start micro iteration 1 +++++ 
+
+     STEP        2 POTENTIAL_ENE =     -999931.70163808  RMSG =     153.0308  MAXG =     434.7990
+     STEP        4 POTENTIAL_ENE =    -1006332.24783882  RMSG =       0.0798  MAXG =       0.4734
+     STEP        5 POTENTIAL_ENE =    -1006332.25054898  RMSG =       0.0553  MAXG =       0.3150
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:          1   -1006332.2510          0.0553          0.3150       1497.8860       3743.5934        459.2445       4476.3267        271.2980       -186.0166       7155.0359    -117215.7454    -906533.8735
+
+Iter.     2
+
++++++ Start micro iteration 2 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006332.25095301  RMSG =       0.0553  MAXG =       0.3152
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:          2   -1006332.9102          0.0553          0.3152       1497.8871       3743.5931        459.2448       4476.3261        271.2981       -186.0170       7155.0489    -117215.7466    -906534.5447
+
+Iter.     3
+
++++++ Start micro iteration 3 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006332.91017277  RMSG =       0.0572  MAXG =       0.3247
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:          3   -1006332.9479          0.0572          0.3247       1497.8865       3743.5930        459.2449       4476.3260        271.2982       -186.0165       7155.0764    -117215.7468    -906534.6095
+
+Iter.     4
+
++++++ Start micro iteration 4 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006332.94788299  RMSG =       0.0577  MAXG =       0.3887
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:          4   -1006332.9668          0.0577          0.3887       1497.8859       3743.5932        459.2450       4476.3260        271.2983       -186.0162       7155.0779    -117215.7469    -906534.6299
+
+Iter.     5
+
++++++ Start micro iteration 5 +++++ 
+
+     STEP        2 POTENTIAL_ENE =    -1005308.76277677  RMSG =      57.8243  MAXG =     257.2822
+     STEP        3 POTENTIAL_ENE =    -1006332.96880672  RMSG =       0.0635  MAXG =       0.3079
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:          5   -1006332.9810          0.0635          0.3079       1497.8712       3743.6181        459.2447       4476.3281        271.2961       -186.0165       7155.0838    -117215.7713    -906534.6354
+
+Iter.     6
+
++++++ Start micro iteration 6 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006332.98101452  RMSG =       0.0636  MAXG =       0.3030
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:          6   -1006332.9894          0.0636          0.3030       1497.8718       3743.6183        459.2448       4476.3279        271.2962       -186.0162       7155.0837    -117215.7716    -906534.6444
+
+Iter.     7
+
++++++ Start micro iteration 7 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006332.98943835  RMSG =       0.0637  MAXG =       0.3045
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:          7   -1006332.9958          0.0637          0.3045       1497.8719       3743.6189        459.2449       4476.3279        271.2962       -186.0161       7155.0875    -117215.7717    -906534.6553
+
+Iter.     8
+
++++++ Start micro iteration 8 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006332.99579684  RMSG =       0.0638  MAXG =       0.3010
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:          8   -1006333.0007          0.0638          0.3010       1497.8719       3743.6196        459.2449       4476.3279        271.2962       -186.0160       7155.0863    -117215.7718    -906534.6598
+
+Iter.     9
+
++++++ Start micro iteration 9 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.00072843  RMSG =       0.0639  MAXG =       0.3000
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:          9   -1006333.0048          0.0639          0.3000       1497.8719       3743.6204        459.2449       4476.3280        271.2963       -186.0160       7155.0866    -117215.7719    -906534.6650
+
+Iter.    10
+
++++++ Start micro iteration 10 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.00482946  RMSG =       0.0639  MAXG =       0.2968
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         10   -1006333.0083          0.0639          0.2968       1497.8719       3743.6212        459.2450       4476.3281        271.2962       -186.0161       7155.0847    -117215.7719    -906534.6674
+
+Iter.    11
+
++++++ Start micro iteration 11 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.00829129  RMSG =       0.0639  MAXG =       0.2990
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         11   -1006333.0114          0.0639          0.2990       1497.8718       3743.6220        459.2450       4476.3281        271.2962       -186.0161       7155.0834    -117215.7719    -906534.6699
+
+Iter.    12
+
++++++ Start micro iteration 12 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.01136732  RMSG =       0.0638  MAXG =       0.3013
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         12   -1006333.0141          0.0638          0.3013       1497.8718       3743.6228        459.2450       4476.3282        271.2962       -186.0161       7155.0811    -117215.7720    -906534.6710
+
+Iter.    13
+
++++++ Start micro iteration 13 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.01407723  RMSG =       0.0638  MAXG =       0.3040
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         13   -1006333.0166          0.0638          0.3040       1497.8717       3743.6235        459.2450       4476.3283        271.2962       -186.0161       7155.0790    -117215.7720    -906534.6721
+
+Iter.    14
+
++++++ Start micro iteration 14 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.01655215  RMSG =       0.0638  MAXG =       0.3062
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         14   -1006333.0188          0.0638          0.3062       1497.8716       3743.6243        459.2450       4476.3283        271.2962       -186.0162       7155.0765    -117215.7721    -906534.6726
+
+Iter.    15
+
++++++ Start micro iteration 15 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.01883454  RMSG =       0.0638  MAXG =       0.3085
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         15   -1006333.0210          0.0638          0.3085       1497.8715       3743.6251        459.2450       4476.3284        271.2962       -186.0162       7155.0741    -117215.7721    -906534.6729
+
+Iter.    16
+
++++++ Start micro iteration 16 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.02096271  RMSG =       0.0638  MAXG =       0.3107
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         16   -1006333.0230          0.0638          0.3107       1497.8714       3743.6258        459.2450       4476.3284        271.2962       -186.0162       7155.0715    -117215.7721    -906534.6729
+
+Iter.    17
+
++++++ Start micro iteration 17 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.02299021  RMSG =       0.0638  MAXG =       0.3130
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         17   -1006333.0249          0.0638          0.3130       1497.8713       3743.6265        459.2450       4476.3284        271.2962       -186.0163       7155.0689    -117215.7722    -906534.6728
+
+Iter.    18
+
++++++ Start micro iteration 18 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.02489085  RMSG =       0.0638  MAXG =       0.3151
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         18   -1006333.0267          0.0638          0.3151       1497.8711       3743.6272        459.2450       4476.3285        271.2963       -186.0163       7155.0661    -117215.7722    -906534.6724
+
+Iter.    19
+
++++++ Start micro iteration 19 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.02670316  RMSG =       0.0638  MAXG =       0.3172
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         19   -1006333.0284          0.0638          0.3172       1497.8710       3743.6279        459.2450       4476.3285        271.2963       -186.0163       7155.0634    -117215.7723    -906534.6720
+
+Iter.    20
+
++++++ Start micro iteration 20 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.02843875  RMSG =       0.0639  MAXG =       0.3193
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         20   -1006333.0301          0.0639          0.3193       1497.8709       3743.6286        459.2450       4476.3285        271.2963       -186.0163       7155.0607    -117215.7723    -906534.6715
+
+Iter.    21
+
++++++ Start micro iteration 21 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.03010878  RMSG =       0.0639  MAXG =       0.3215
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         21   -1006333.0317          0.0639          0.3215       1497.8707       3743.6293        459.2450       4476.3285        271.2963       -186.0164       7155.0579    -117215.7723    -906534.6708
+
+Iter.    22
+
++++++ Start micro iteration 22 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.03172151  RMSG =       0.0639  MAXG =       0.3236
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         22   -1006333.0333          0.0639          0.3236       1497.8706       3743.6300        459.2450       4476.3285        271.2963       -186.0164       7155.0552    -117215.7724    -906534.6701
+
+Iter.    23
+
++++++ Start micro iteration 23 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.03328329  RMSG =       0.0640  MAXG =       0.3257
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         23   -1006333.0348          0.0640          0.3257       1497.8705       3743.6307        459.2450       4476.3286        271.2963       -186.0164       7155.0524    -117215.7724    -906534.6693
+
+Iter.    24
+
++++++ Start micro iteration 24 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.03479817  RMSG =       0.0640  MAXG =       0.3278
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         24   -1006333.0363          0.0640          0.3278       1497.8703       3743.6313        459.2450       4476.3286        271.2963       -186.0164       7155.0496    -117215.7725    -906534.6685
+
+Iter.    25
+
++++++ Start micro iteration 25 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.03627157  RMSG =       0.0640  MAXG =       0.3299
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         25   -1006333.0377          0.0640          0.3299       1497.8702       3743.6319        459.2450       4476.3286        271.2963       -186.0165       7155.0469    -117215.7725    -906534.6676
+
+Iter.    26
+
++++++ Start micro iteration 26 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.03770708  RMSG =       0.0641  MAXG =       0.3320
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         26   -1006333.0391          0.0641          0.3320       1497.8701       3743.6326        459.2450       4476.3286        271.2963       -186.0165       7155.0441    -117215.7725    -906534.6667
+
+Iter.    27
+
++++++ Start micro iteration 27 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.03910634  RMSG =       0.0641  MAXG =       0.3340
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         27   -1006333.0405          0.0641          0.3340       1497.8699       3743.6332        459.2450       4476.3286        271.2963       -186.0165       7155.0414    -117215.7726    -906534.6658
+
+Iter.    28
+
++++++ Start micro iteration 28 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.04047317  RMSG =       0.0642  MAXG =       0.3361
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         28   -1006333.0418          0.0642          0.3361       1497.8698       3743.6338        459.2450       4476.3285        271.2963       -186.0165       7155.0387    -117215.7726    -906534.6648
+
+Iter.    29
+
++++++ Start micro iteration 29 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.04178251  RMSG =       0.0642  MAXG =       0.3382
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         29   -1006333.0431          0.0642          0.3382       1497.8697       3743.6344        459.2450       4476.3285        271.2963       -186.0165       7155.0360    -117215.7727    -906534.6638
+
+Iter.    30
+
++++++ Start micro iteration 30 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.04309403  RMSG =       0.0643  MAXG =       0.3403
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         30   -1006333.0444          0.0643          0.3403       1497.8695       3743.6350        459.2450       4476.3285        271.2963       -186.0166       7155.0333    -117215.7727    -906534.6628
+
+Iter.    31
+
++++++ Start micro iteration 31 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.04437719  RMSG =       0.0644  MAXG =       0.3424
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         31   -1006333.0456          0.0644          0.3424       1497.8694       3743.6356        459.2450       4476.3285        271.2963       -186.0166       7155.0306    -117215.7727    -906534.6618
+
+Iter.    32
+
++++++ Start micro iteration 32 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.04563378  RMSG =       0.0644  MAXG =       0.3444
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         32   -1006333.0469          0.0644          0.3444       1497.8692       3743.6362        459.2450       4476.3285        271.2963       -186.0166       7155.0279    -117215.7728    -906534.6608
+
+Iter.    33
+
++++++ Start micro iteration 33 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.04686472  RMSG =       0.0645  MAXG =       0.3465
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         33   -1006333.0481          0.0645          0.3465       1497.8691       3743.6368        459.2450       4476.3285        271.2963       -186.0166       7155.0253    -117215.7728    -906534.6597
+
+Iter.    34
+
++++++ Start micro iteration 34 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.04807119  RMSG =       0.0645  MAXG =       0.3486
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         34   -1006333.0493          0.0645          0.3486       1497.8690       3743.6374        459.2451       4476.3285        271.2963       -186.0166       7155.0227    -117215.7729    -906534.6587
+
+Iter.    35
+
++++++ Start micro iteration 35 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.04925438  RMSG =       0.0646  MAXG =       0.3506
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         35   -1006333.0504          0.0646          0.3506       1497.8688       3743.6380        459.2451       4476.3285        271.2963       -186.0167       7155.0201    -117215.7729    -906534.6576
+
+Iter.    36
+
++++++ Start micro iteration 36 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.05041629  RMSG =       0.0647  MAXG =       0.3526
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         36   -1006333.0515          0.0647          0.3526       1497.8687       3743.6385        459.2451       4476.3284        271.2963       -186.0167       7155.0176    -117215.7729    -906534.6565
+
+Iter.    37
+
++++++ Start micro iteration 37 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.05154879  RMSG =       0.0647  MAXG =       0.3547
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         37   -1006333.0526          0.0647          0.3547       1497.8686       3743.6391        459.2451       4476.3284        271.2963       -186.0167       7155.0150    -117215.7730    -906534.6555
+
+Iter.    38
+
++++++ Start micro iteration 38 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.05264642  RMSG =       0.0648  MAXG =       0.3567
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         38   -1006333.0537          0.0648          0.3567       1497.8684       3743.6396        459.2451       4476.3284        271.2964       -186.0167       7155.0125    -117215.7730    -906534.6544
+
+Iter.    39
+
++++++ Start micro iteration 39 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.05373239  RMSG =       0.0649  MAXG =       0.3587
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         39   -1006333.0548          0.0649          0.3587       1497.8683       3743.6402        459.2451       4476.3283        271.2964       -186.0167       7155.0101    -117215.7731    -906534.6533
+
+Iter.    40
+
++++++ Start micro iteration 40 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.05480091  RMSG =       0.0650  MAXG =       0.3607
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         40   -1006333.0559          0.0650          0.3607       1497.8681       3743.6407        459.2451       4476.3283        271.2964       -186.0167       7155.0076    -117215.7731    -906534.6523
+
+Iter.    41
+
++++++ Start micro iteration 41 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.05585311  RMSG =       0.0651  MAXG =       0.3627
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         41   -1006333.0569          0.0651          0.3627       1497.8680       3743.6413        459.2451       4476.3283        271.2964       -186.0167       7155.0052    -117215.7731    -906534.6512
+
+Iter.    42
+
++++++ Start micro iteration 42 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.05688872  RMSG =       0.0651  MAXG =       0.3647
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         42   -1006333.0579          0.0651          0.3647       1497.8679       3743.6418        459.2451       4476.3283        271.2964       -186.0168       7155.0028    -117215.7732    -906534.6502
+
+Iter.    43
+
++++++ Start micro iteration 43 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.05790739  RMSG =       0.0652  MAXG =       0.3667
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         43   -1006333.0589          0.0652          0.3667       1497.8677       3743.6423        459.2451       4476.3282        271.2964       -186.0168       7155.0004    -117215.7732    -906534.6491
+
+Iter.    44
+
++++++ Start micro iteration 44 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.05888437  RMSG =       0.0653  MAXG =       0.3686
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         44   -1006333.0599          0.0653          0.3686       1497.8676       3743.6428        459.2451       4476.3282        271.2964       -186.0168       7154.9981    -117215.7732    -906534.6481
+
+Iter.    45
+
++++++ Start micro iteration 45 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.05987058  RMSG =       0.0654  MAXG =       0.3706
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         45   -1006333.0608          0.0654          0.3706       1497.8675       3743.6433        459.2451       4476.3281        271.2964       -186.0168       7154.9958    -117215.7733    -906534.6470
+
+Iter.    46
+
++++++ Start micro iteration 46 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06084313  RMSG =       0.0655  MAXG =       0.3726
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         46   -1006333.0618          0.0655          0.3726       1497.8673       3743.6438        459.2451       4476.3281        271.2964       -186.0168       7154.9935    -117215.7733    -906534.6460
+
+Iter.    47
+
++++++ Start micro iteration 47 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06180006  RMSG =       0.0656  MAXG =       0.3745
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         47   -1006333.0627          0.0656          0.3745       1497.8672       3743.6443        459.2451       4476.3281        271.2964       -186.0168       7154.9913    -117215.7734    -906534.6450
+
+Iter.    48
+
++++++ Start micro iteration 48 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06274284  RMSG =       0.0656  MAXG =       0.3764
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         48   -1006333.0637          0.0656          0.3764       1497.8671       3743.6448        459.2451       4476.3280        271.2964       -186.0168       7154.9891    -117215.7734    -906534.6440
+
+Iter.    49
+
++++++ Start micro iteration 49 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06367178  RMSG =       0.0657  MAXG =       0.3783
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         49   -1006333.0646          0.0657          0.3783       1497.8669       3743.6453        459.2451       4476.3280        271.2964       -186.0168       7154.9869    -117215.7734    -906534.6430
+
+Iter.    50
+
++++++ Start micro iteration 50 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06458732  RMSG =       0.0658  MAXG =       0.3802
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         50   -1006333.0655          0.0658          0.3802       1497.8668       3743.6458        459.2451       4476.3279        271.2964       -186.0168       7154.9847    -117215.7735    -906534.6420
+
+Iter.    51
+
++++++ Start micro iteration 51 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06548930  RMSG =       0.0659  MAXG =       0.3821
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         51   -1006333.0664          0.0659          0.3821       1497.8667       3743.6463        459.2451       4476.3279        271.2964       -186.0169       7154.9826    -117215.7735    -906534.6410
+
+Iter.    52
+
++++++ Start micro iteration 52 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06637720  RMSG =       0.0660  MAXG =       0.3840
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         52   -1006333.0673          0.0660          0.3840       1497.8666       3743.6468        459.2451       4476.3278        271.2964       -186.0169       7154.9805    -117215.7735    -906534.6400
+
+Iter.    53
+
++++++ Start micro iteration 53 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06725255  RMSG =       0.0661  MAXG =       0.3859
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         53   -1006333.0681          0.0661          0.3859       1497.8664       3743.6472        459.2451       4476.3278        271.2964       -186.0169       7154.9784    -117215.7736    -906534.6391
+
+Iter.    54
+
++++++ Start micro iteration 54 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06811523  RMSG =       0.0662  MAXG =       0.3877
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         54   -1006333.0689          0.0662          0.3877       1497.8663       3743.6477        459.2451       4476.3277        271.2965       -186.0169       7154.9763    -117215.7736    -906534.6381
+
+Iter.    55
+
++++++ Start micro iteration 55 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06894445  RMSG =       0.0663  MAXG =       0.3897
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         55   -1006333.0698          0.0663          0.3897       1497.8662       3743.6481        459.2452       4476.3277        271.2965       -186.0169       7154.9743    -117215.7736    -906534.6372
+
+Iter.    56
+
++++++ Start micro iteration 56 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.06978314  RMSG =       0.0664  MAXG =       0.3915
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         56   -1006333.0706          0.0664          0.3915       1497.8661       3743.6486        459.2452       4476.3276        271.2965       -186.0169       7154.9723    -117215.7737    -906534.6363
+
+Iter.    57
+
++++++ Start micro iteration 57 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.07060933  RMSG =       0.0665  MAXG =       0.3933
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         57   -1006333.0714          0.0665          0.3933       1497.8659       3743.6490        459.2452       4476.3276        271.2965       -186.0169       7154.9704    -117215.7737    -906534.6353
+
+Iter.    58
+
++++++ Start micro iteration 58 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.07142377  RMSG =       0.0666  MAXG =       0.3951
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         58   -1006333.0722          0.0666          0.3951       1497.8658       3743.6494        459.2452       4476.3275        271.2965       -186.0169       7154.9684    -117215.7737    -906534.6344
+
+Iter.    59
+
++++++ Start micro iteration 59 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.07222547  RMSG =       0.0667  MAXG =       0.3969
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         59   -1006333.0730          0.0667          0.3969       1497.8657       3743.6499        459.2452       4476.3275        271.2965       -186.0169       7154.9665    -117215.7738    -906534.6335
+
+Iter.    60
+
++++++ Start micro iteration 60 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.07301556  RMSG =       0.0668  MAXG =       0.3987
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         60   -1006333.0738          0.0668          0.3987       1497.8656       3743.6503        459.2452       4476.3274        271.2965       -186.0169       7154.9646    -117215.7738    -906534.6327
+
+Iter.    61
+
++++++ Start micro iteration 61 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.07379483  RMSG =       0.0669  MAXG =       0.4004
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         61   -1006333.0746          0.0669          0.4004       1497.8655       3743.6507        459.2452       4476.3274        271.2965       -186.0169       7154.9628    -117215.7739    -906534.6318
+
+Iter.    62
+
++++++ Start micro iteration 62 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.07455446  RMSG =       0.0670  MAXG =       0.4022
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         62   -1006333.0753          0.0670          0.4022       1497.8653       3743.6511        459.2452       4476.3273        271.2965       -186.0169       7154.9609    -117215.7739    -906534.6309
+
+Iter.    63
+
++++++ Start micro iteration 63 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.07531223  RMSG =       0.0671  MAXG =       0.4039
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         63   -1006333.0761          0.0671          0.4039       1497.8652       3743.6515        459.2452       4476.3273        271.2965       -186.0169       7154.9591    -117215.7739    -906534.6301
+
+Iter.    64
+
++++++ Start micro iteration 64 +++++ 
+
+     STEP        2 POTENTIAL_ENE =    -1004055.42853027  RMSG =      97.7538  MAXG =     397.7655
+     STEP        3 POTENTIAL_ENE =    -1006333.07753761  RMSG =       0.0498  MAXG =       0.3192
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         64   -1006333.0783          0.0498          0.3192       1497.8663       3743.6371        459.2461       4476.3291        271.2967       -186.0169       7154.9627    -117215.7705    -906534.6289
+
+Iter.    65
+
++++++ Start micro iteration 65 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.07829251  RMSG =       0.0499  MAXG =       0.3224
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         65   -1006333.0790          0.0499          0.3224       1497.8665       3743.6375        459.2461       4476.3288        271.2967       -186.0167       7154.9609    -117215.7707    -906534.6281
+
+Iter.    66
+
++++++ Start micro iteration 66 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.07902412  RMSG =       0.0501  MAXG =       0.3353
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         66   -1006333.0797          0.0501          0.3353       1497.8664       3743.6378        459.2461       4476.3286        271.2967       -186.0167       7154.9592    -117215.7707    -906534.6272
+
+Iter.    67
+
++++++ Start micro iteration 67 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.07973802  RMSG =       0.0503  MAXG =       0.3423
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         67   -1006333.0804          0.0503          0.3423       1497.8663       3743.6382        459.2461       4476.3285        271.2967       -186.0167       7154.9574    -117215.7708    -906534.6262
+
+Iter.    68
+
++++++ Start micro iteration 68 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08043887  RMSG =       0.0505  MAXG =       0.3475
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         68   -1006333.0811          0.0505          0.3475       1497.8662       3743.6386        459.2461       4476.3284        271.2968       -186.0166       7154.9557    -117215.7709    -906534.6253
+
+Iter.    69
+
++++++ Start micro iteration 69 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08112870  RMSG =       0.0506  MAXG =       0.3518
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         69   -1006333.0818          0.0506          0.3518       1497.8661       3743.6390        459.2461       4476.3283        271.2968       -186.0166       7154.9540    -117215.7709    -906534.6245
+
+Iter.    70
+
++++++ Start micro iteration 70 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08180760  RMSG =       0.0507  MAXG =       0.3556
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         70   -1006333.0825          0.0507          0.3556       1497.8659       3743.6394        459.2461       4476.3282        271.2968       -186.0166       7154.9523    -117215.7709    -906534.6236
+
+Iter.    71
+
++++++ Start micro iteration 71 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08247605  RMSG =       0.0509  MAXG =       0.3592
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         71   -1006333.0831          0.0509          0.3592       1497.8658       3743.6398        459.2461       4476.3282        271.2968       -186.0166       7154.9507    -117215.7710    -906534.6228
+
+Iter.    72
+
++++++ Start micro iteration 72 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08313431  RMSG =       0.0510  MAXG =       0.3625
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         72   -1006333.0838          0.0510          0.3625       1497.8657       3743.6401        459.2461       4476.3281        271.2968       -186.0166       7154.9490    -117215.7710    -906534.6220
+
+Iter.    73
+
++++++ Start micro iteration 73 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08378169  RMSG =       0.0511  MAXG =       0.3658
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         73   -1006333.0844          0.0511          0.3658       1497.8656       3743.6405        459.2461       4476.3280        271.2968       -186.0166       7154.9474    -117215.7710    -906534.6212
+
+Iter.    74
+
++++++ Start micro iteration 74 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08441992  RMSG =       0.0512  MAXG =       0.3689
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         74   -1006333.0850          0.0512          0.3689       1497.8655       3743.6409        459.2461       4476.3279        271.2968       -186.0166       7154.9459    -117215.7711    -906534.6204
+
+Iter.    75
+
++++++ Start micro iteration 75 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08504840  RMSG =       0.0513  MAXG =       0.3719
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         75   -1006333.0857          0.0513          0.3719       1497.8653       3743.6412        459.2461       4476.3279        271.2968       -186.0166       7154.9443    -117215.7711    -906534.6196
+
+Iter.    76
+
++++++ Start micro iteration 76 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08566731  RMSG =       0.0514  MAXG =       0.3747
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         76   -1006333.0863          0.0514          0.3747       1497.8652       3743.6416        459.2461       4476.3278        271.2968       -186.0166       7154.9428    -117215.7711    -906534.6188
+
+Iter.    77
+
++++++ Start micro iteration 77 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08627695  RMSG =       0.0515  MAXG =       0.3775
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         77   -1006333.0869          0.0515          0.3775       1497.8651       3743.6419        459.2461       4476.3277        271.2968       -186.0166       7154.9412    -117215.7712    -906534.6180
+
+Iter.    78
+
++++++ Start micro iteration 78 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08687746  RMSG =       0.0517  MAXG =       0.3802
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         78   -1006333.0875          0.0517          0.3802       1497.8650       3743.6423        459.2461       4476.3276        271.2968       -186.0166       7154.9397    -117215.7712    -906534.6173
+
+Iter.    79
+
++++++ Start micro iteration 79 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08746924  RMSG =       0.0518  MAXG =       0.3829
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         79   -1006333.0881          0.0518          0.3829       1497.8649       3743.6426        459.2462       4476.3276        271.2968       -186.0166       7154.9383    -117215.7712    -906534.6165
+
+Iter.    80
+
++++++ Start micro iteration 80 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08805148  RMSG =       0.0519  MAXG =       0.3855
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         80   -1006333.0886          0.0519          0.3855       1497.8648       3743.6430        459.2462       4476.3275        271.2968       -186.0166       7154.9368    -117215.7713    -906534.6158
+
+Iter.    81
+
++++++ Start micro iteration 81 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08861882  RMSG =       0.0520  MAXG =       0.3880
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         81   -1006333.0892          0.0520          0.3880       1497.8647       3743.6433        459.2462       4476.3274        271.2969       -186.0166       7154.9354    -117215.7713    -906534.6151
+
+Iter.    82
+
++++++ Start micro iteration 82 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08917707  RMSG =       0.0521  MAXG =       0.3904
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         82   -1006333.0897          0.0521          0.3904       1497.8646       3743.6436        459.2462       4476.3273        271.2969       -186.0166       7154.9340    -117215.7713    -906534.6144
+
+Iter.    83
+
++++++ Start micro iteration 83 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.08972701  RMSG =       0.0522  MAXG =       0.3928
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         83   -1006333.0903          0.0522          0.3928       1497.8645       3743.6439        459.2462       4476.3273        271.2969       -186.0166       7154.9326    -117215.7714    -906534.6136
+
+Iter.    84
+
++++++ Start micro iteration 84 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.09026923  RMSG =       0.0524  MAXG =       0.3951
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         84   -1006333.0908          0.0524          0.3951       1497.8644       3743.6443        459.2462       4476.3272        271.2969       -186.0166       7154.9312    -117215.7714    -906534.6129
+
+Iter.    85
+
++++++ Start micro iteration 85 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.09080384  RMSG =       0.0525  MAXG =       0.3973
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         85   -1006333.0913          0.0525          0.3973       1497.8643       3743.6446        459.2462       4476.3271        271.2969       -186.0166       7154.9299    -117215.7714    -906534.6122
+
+Iter.    86
+
++++++ Start micro iteration 86 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.09133067  RMSG =       0.0526  MAXG =       0.3994
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         86   -1006333.0919          0.0526          0.3994       1497.8642       3743.6449        459.2462       4476.3270        271.2969       -186.0166       7154.9285    -117215.7714    -906534.6116
+
+Iter.    87
+
++++++ Start micro iteration 87 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.09185029  RMSG =       0.0527  MAXG =       0.4015
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         87   -1006333.0924          0.0527          0.4015       1497.8641       3743.6452        459.2462       4476.3270        271.2969       -186.0166       7154.9272    -117215.7715    -906534.6109
+
+Iter.    88
+
++++++ Start micro iteration 88 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.09236239  RMSG =       0.0528  MAXG =       0.4035
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         88   -1006333.0929          0.0528          0.4035       1497.8640       3743.6455        459.2462       4476.3269        271.2969       -186.0166       7154.9259    -117215.7715    -906534.6102
+
+Iter.    89
+
++++++ Start micro iteration 89 +++++ 
+
+     STEP        2 POTENTIAL_ENE =    -1004955.49723753  RMSG =      80.3861  MAXG =     358.1070
+     STEP        3 POTENTIAL_ENE =    -1006333.09388889  RMSG =       0.0534  MAXG =       0.3413
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         89   -1006333.0944          0.0534          0.3413       1497.8558       3743.6455        459.2453       4476.3263        271.2953       -186.0173       7154.9269    -117215.7823    -906534.5899
+
+Iter.    90
+
++++++ Start micro iteration 90 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.09437053  RMSG =       0.0535  MAXG =       0.3432
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         90   -1006333.0949          0.0535          0.3432       1497.8560       3743.6457        459.2453       4476.3260        271.2954       -186.0171       7154.9256    -117215.7825    -906534.5892
+
+Iter.    91
+
++++++ Start micro iteration 91 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.09486874  RMSG =       0.0538  MAXG =       0.3532
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         91   -1006333.0954          0.0538          0.3532       1497.8560       3743.6459        459.2453       4476.3258        271.2954       -186.0171       7154.9243    -117215.7826    -906534.5885
+
+Iter.    92
+
++++++ Start micro iteration 92 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.09535825  RMSG =       0.0539  MAXG =       0.3583
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         92   -1006333.0958          0.0539          0.3583       1497.8559       3743.6462        459.2453       4476.3257        271.2954       -186.0170       7154.9230    -117215.7826    -906534.5877
+
+Iter.    93
+
++++++ Start micro iteration 93 +++++ 
+
+     STEP        1 POTENTIAL_ENE =    -1006333.09584019  RMSG =       0.0541  MAXG =       0.3619
+
++++++ STOP: RMSG and MAXG becomes sufficiently small.+++++
+
+INFO:         93   -1006333.0963          0.0541          0.3619       1497.8558       3743.6465        459.2453       4476.3256        271.2954       -186.0170       7154.9218    -117215.7827    -906534.5870
+

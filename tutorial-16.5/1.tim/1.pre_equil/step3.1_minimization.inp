@@ -1,0 +1,62 @@
+[INPUT]
+topfile = toppar/top_all36_prot.rtf, toppar/top_all36_cgenff.rtf 
+parfile = toppar/par_all36_prot.prm, toppar/par_all36_cgenff.prm
+strfile = toppar/toppar_water_ions.str, toppar/toppar_dhap.3.str
+psffile = ../0.build/step2_solvator.psf    # protein structure file
+pdbfile = ../0.build/step2_solvator.pdb    # PDB file
+reffile = ../0.build/step2_solvator.pdb    # PDB file
+ 
+[OUTPUT]
+rstfile = step3.1_minimization.rst
+dcdfile = step3.1_minimization.dcd
+
+[ENERGY]
+forcefield      = CHARMM        # [CHARMM]
+electrostatic   = PME           # [CUTOFF,PME]
+switchdist      = 10.0          # switch distance
+cutoffdist      = 12.0          # cutoff distance
+pairlistdist    = 13.5          # pair-list distance
+pme_nspline     = 4
+water_model     = NONE
+vdw_force_switch = YES
+contact_check   = YES          # avoid atomic crash
+
+[MINIMIZE]
+method          = SD
+nsteps          = 1000
+eneout_period   = 10
+rstout_period   = 100
+crdout_period   = 100
+ 
+[CONSTRAINTS]
+rigid_bond      = YES           # constraints all bonds involving hydrogen
+fast_water      = YES         
+shake_tolerance = 1.0D-10
+
+[BOUNDARY]
+type            = PBC           # [PBC]
+box_size_x      = 110.0
+box_size_y      = 90.0
+box_size_z      = 90.0
+
+[SELECTION]
+group1  = (sid:TIMA or sid:TIMB) and (an:CA | an:C | an:O | an:N) # backbone
+group2  = (sid:TIMA or sid:TIMB) and not (an:CA | an:C | an:O | an:N) and not hydrogen # sidechain
+group3  = (sid:DHA or sid:DHA around_res:3.0) and not hydrogen    # reaction center
+group4  = sid:WAT and an:OH2 # Xtal water
+
+[RESTRAINTS]
+nfunctions      = 4
+function1       = POSI
+constant1       = 10.0
+select_index1   = 1
+function2       = POSI
+constant2       = 2.0
+select_index2   = 2
+function3       = POSI
+constant3       = 2.0
+select_index3   = 3
+function4       = POSI
+constant4       = 2.0
+select_index4   = 4
+

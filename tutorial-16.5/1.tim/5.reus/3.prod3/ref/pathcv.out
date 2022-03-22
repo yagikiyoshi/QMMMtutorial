@@ -1,0 +1,252 @@
+****************************************************
+*                                                  *
+*                 PATHCV_ANALYSIS                  *
+*                                                  *
+*        Utility to analyze trajectory files       *
+*                                                  *
+*              Developed by RIKEN AICS             *
+*                                                  *
+****************************************************
+ 
+[STEP1] Read Control Parameters for Analysis
+ 
+Read_Ctrl_Input> Input Files
+  cvfile          = prod3_{}.dis
+  pathfile        = ../2.window/win_rr.dat
+ 
+Read_Ctrl_Output> Output Files
+  pathcvfile      = prod3_{}.pathcv
+ 
+Read_Ctrl_Trajectory> Parameters of Trajectory
+  # of trj files  =          0
+  trj format      = DCD       
+  trj type        =   COOR+BOX
+ 
+Read_Ctrl_Option> Parameters of OPTION
+
+  check only      = no
+  trajectory      = no
+     nreplica     =         21
+
+[STEP2] Set Relevant Variables and Structures
+ 
+[STEP3] Analysis trajectory files
+ 
+Read_Data> 
+  file name = ../2.window/win_rr.dat
+    # of dimension : 5
+    # of steps     : 21
+
+Read_Data> 
+  file name = prod3_1.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     1.21202 Std     0.26932
+Distance : Ave     0.00960 Std     0.00735
+Read_Data> 
+  file name = prod3_2.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     1.88600 Std     0.60104
+Distance : Ave     0.01186 Std     0.00857
+Read_Data> 
+  file name = prod3_3.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     2.83819 Std     0.56057
+Distance : Ave     0.00774 Std     0.00622
+Read_Data> 
+  file name = prod3_4.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     3.75126 Std     0.45085
+Distance : Ave     0.00850 Std     0.00683
+Read_Data> 
+  file name = prod3_5.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     4.71996 Std     0.58740
+Distance : Ave     0.01493 Std     0.01113
+Read_Data> 
+  file name = prod3_6.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     5.62655 Std     0.50175
+Distance : Ave     0.00850 Std     0.00693
+Read_Data> 
+  file name = prod3_7.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     6.63111 Std     0.65519
+Distance : Ave     0.00808 Std     0.00655
+Read_Data> 
+  file name = prod3_8.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     7.61664 Std     0.50901
+Distance : Ave     0.00822 Std     0.00739
+Read_Data> 
+  file name = prod3_9.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     8.58138 Std     0.52561
+Distance : Ave     0.01075 Std     0.00887
+Read_Data> 
+  file name = prod3_10.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave     9.51742 Std     0.44189
+Distance : Ave     0.01213 Std     0.00920
+Read_Data> 
+  file name = prod3_11.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    10.48397 Std     0.39083
+Distance : Ave     0.00818 Std     0.00638
+Read_Data> 
+  file name = prod3_12.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    11.22451 Std     0.50306
+Distance : Ave     0.01195 Std     0.00900
+Read_Data> 
+  file name = prod3_13.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    12.12381 Std     0.45054
+Distance : Ave     0.01045 Std     0.00880
+Read_Data> 
+  file name = prod3_14.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    13.37240 Std     0.62150
+Distance : Ave     0.01015 Std     0.00783
+Read_Data> 
+  file name = prod3_15.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    15.06383 Std     0.61282
+Distance : Ave     0.00997 Std     0.00690
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Read_Data> 
+  file name = prod3_16.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    16.52821 Std     0.47975
+Distance : Ave     0.00936 Std     0.00691
+Read_Data> 
+  file name = prod3_17.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    17.48290 Std     0.51841
+Distance : Ave     0.01276 Std     0.00962
+Read_Data> 
+  file name = prod3_18.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    18.43651 Std     0.47224
+Distance : Ave     0.01210 Std     0.00953
+Read_Data> 
+  file name = prod3_19.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    19.26461 Std     0.53386
+Distance : Ave     0.01117 Std     0.00854
+Read_Data> 
+  file name = prod3_20.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    20.05827 Std     0.48311
+Distance : Ave     0.01083 Std     0.00789
+Read_Data> 
+  file name = prod3_21.dis
+    # of dimension : 5
+    # of steps     : 1000
+
+Calc_Pathcv> 
+  ..done
+
+Progress : Ave    20.74021 Std     0.32714
+Distance : Ave     0.01328 Std     0.00937
+[STEP4] Deallocate memory
+ 

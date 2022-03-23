@@ -3,7 +3,7 @@ topfile = toppar/top_all36_prot.rtf, toppar/top_all36_cgenff.rtf
 parfile = toppar/par_all36_prot.prm, toppar/par_all36_cgenff.prm
 strfile = toppar/toppar_water_ions.str, toppar/toppar_dhap.3.str
 psffile = ../../2.equil/step4_nvt_100.psf     # protein structure file
-pdbfile = ../initial16/initial{}.pdb          # PDB file for input coord
+pdbfile = ../0.initial16/initial{}.pdb          # PDB file for input coord
 reffile = ../../2.equil/step4_nvt_100.pdb     # PDB file
 
 [OUTPUT]

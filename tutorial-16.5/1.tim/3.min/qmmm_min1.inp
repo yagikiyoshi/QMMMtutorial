@@ -43,7 +43,6 @@ qmmaxtrial         = 1
 qmsave_period      = 10
 qmatm_select_index = 1 
 exclude_charge     = group
-qminfo             = yes
 
 [SELECTION]
 group1         = sid:DHA or (sid:TIMA and (rno:95 or rno:165) and not (an:CA  | an:C   | an:O   | an:N | an:HN | an:HA))

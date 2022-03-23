@@ -24,7 +24,7 @@ vdw_force_switch = YES
 [DYNAMICS]
 integrator      = VVER          # [LEAP,VVER]
 timestep        = 0.0005        # timestep (ps)
-nsteps          = 20000         # number of MD steps
+nsteps          = 1000          # number of MD steps
 crdout_period   = 500 
 eneout_period   = 500           # energy output period
 rstout_period   = 500    

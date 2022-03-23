@@ -8,7 +8,7 @@ reffile = ../../2.equil/step4_nvt_100.pdb     # PDB file
 disfile        = NAME_NUM.dis    # distance file
  
 [TRAJECTORY]
-trjfile1       = NAME_NUM.dcd    # trajectory file
+trjfile1       = ../1.string16/NAME_NUM.dcd    # trajectory file
 md_step1       = 200             # number of MD steps
 mdout_period1  = 1               # MD output period
 ana_period1    = 1               # analysis period

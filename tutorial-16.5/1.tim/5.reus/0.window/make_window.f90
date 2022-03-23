@@ -1,40 +1,115 @@
 
    implicit none
 
-   integer, parameter :: nimg=16, ndim=5
-
-   integer :: i, j, k, img
-   real(8) :: rr(9), mep_rr(ndim,nimg), slen(nimg), ss
-   real(8) :: coeff(4,nimg-1,ndim)
+!   integer, parameter :: nimg=16, ndim=5
+   integer :: i, j, k, img, nimg, ndim
+!   real(8) :: rr(9), mep_rr(ndim,nimg), slen(nimg), ss
+!   real(8) :: coeff(4,nimg-1,ndim)
+   integer, allocatable :: idx(:)
+   real(8), allocatable :: mep_rr(:,:), slen(:), coeff(:,:,:)
    integer :: nw
-   real(8) :: ds
+   real(8) :: ss, ds
    real(8), allocatable :: win_rr(:,:)
-   character(180) :: line
+   character(1000) :: line
+   real(8)         :: rr(100)
    character(2)   :: nn
    character(20)  :: fname
    integer :: len, stat
-   character(:), allocatable :: dat
+   character(:), allocatable :: arg
+   character(:), allocatable :: datfile, cdim, cidx, cds
    intrinsic :: command_argument_count, get_command_argument
 
 
    if (command_argument_count() == 0) then
-     write(6,'("USAGE: make_window rpath_xxx.dat")')
+     write(6,'("USAGE: make_window -dat rpath_xxx.dat -ds ds -ndim num_of_dimension [-idx 1,2,4]")')
      stop
    end if
 
-   call get_command_argument(1, length = len, status = stat)
-   if (stat == 0) then
-     allocate (character(len) :: dat)
-     call get_command_argument(i, dat, status = stat)
-   end if
+   ds = -1.0D+00
+   do i = 1, command_argument_count()
+     call get_command_argument(i, length = len, status = stat)
+     if (stat == 0) then
+       allocate (character(len) :: arg)
+       call get_command_argument(i, arg, status = stat)
+       if (stat == 0) then
+         if (index(arg,"-dat") > 0) then
+           call get_command_argument(i+1, length = len, status = stat)
+           allocate (character(len) :: datfile)
+           call get_command_argument(i+1, datfile, status = stat)
+           
+         else if (index(arg,"-ndim") > 0) then
+           call get_command_argument(i+1, length = len, status = stat)
+           allocate (character(len) :: cdim)
+           call get_command_argument(i+1, cdim, status = stat)
+           read(cdim,*) ndim
+
+         else if (index(arg,"-ds") > 0) then
+           call get_command_argument(i+1, length = len, status = stat)
+           allocate (character(len) :: cds)
+           call get_command_argument(i+1, cds, status = stat)
+           read(cds,*) ds
+         end if
+       end if
+       deallocate(arg)
+     end if
+   end do
+
    
    ! read MEP data
-   open(10,file=dat,status='old')
+   open(10,file=datfile,status='old')
+   i=0
+   do while(.true.)
+     read(10,*,end=10) 
+     i=i+1
+   end do
+   10 continue
+   nimg = i
+
+   !write(6,'(i4)') nimg
+   !write(6,'(i4)') ndim
+
+   allocate(mep_rr(ndim,nimg), slen(nimg), coeff(4,nimg-1,ndim))
+   allocate(idx(ndim))
+   idx=-1
+   do i = 1, command_argument_count()
+     call get_command_argument(i, length = len, status = stat)
+     if (stat == 0) then
+       allocate (character(len) :: arg)
+       call get_command_argument(i, arg, status = stat)
+       if (stat == 0) then
+         if (index(arg,"-idx") > 0) then
+           call get_command_argument(i+1, length = len, status = stat)
+           allocate (character(len) :: cidx)
+           call get_command_argument(i+1, cidx, status = stat)
+           read(cidx,*,end=20) idx
+           20 continue
+           ! write(6,*) cidx
+           
+         end if
+       end if
+       deallocate(arg)
+     end if
+   end do
+
+   if(idx(1) < 0) then
+     do i = 1, ndim
+       idx(i) = i
+     end do
+   else if(idx(ndim) < 0) then
+      write(6,'("Error: The number of index is less than ndim")')
+      stop
+   end if
+   ! write(6,'(5i3)') idx
+
+   rewind(10)
    do i = 1, nimg
      read(10,'(a)') line
-     read(line(29:136),*) rr
-     mep_rr(1:4,i) = rr(1:4)
-     mep_rr(5,i) = rr(6)
+     read(line,*,end=30) rr
+     30 continue
+
+     do j = 1, ndim
+       mep_rr(j,i) = rr(idx(j)+3)
+     end do
    end do
    close(10)
 
@@ -62,7 +137,7 @@
    end do
 
    ! generate window
-   ds = 0.1D+00
+   if (ds < 0.D+00) ds = 0.1D+00
 
    nw = int(slen(nimg)/ds)
    ds = slen(nimg)/nw
@@ -80,9 +155,11 @@
      end do
    end do
 
+   write(6,'("Reaction path (internal)")')
    open(10,file="win_rr.dat",status="unknown")
    do i = 1, nw
      write(10,'(i4,9f8.4)') i, win_rr(:,i)
+     write(6,'(i4,9f8.4)') i, win_rr(:,i)
    end do
    close(10)
 

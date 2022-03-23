@@ -1,6 +1,6 @@
 [INPUT]
 topfile = toppar/top_all36_prot.rtf, toppar/top_all36_cgenff.rtf, toppar/cho.rtf
-parfile = toppar/par_all36m_prot.prm, toppar/par_all36_cgenff.prm, toppar/cho.prm
+parfile = toppar/par_all36_prot.prm, toppar/par_all36_cgenff.prm, toppar/cho.prm
 strfile = toppar/toppar_water_ions.str
 psffile = ../2.equil/step3_nvt_100.psf     # protein structure file
 pdbfile = ../2.equil/step3_nvt_100.pdb     # CRD file

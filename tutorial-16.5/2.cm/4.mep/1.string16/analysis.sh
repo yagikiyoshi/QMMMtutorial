@@ -1,14 +1,5 @@
 
-#export PATH=${PATH}:~/devel/genesis/genesis.gat_qmmm_beluga/bin
-
-module load intel/19.5.281
-module load gcc/7.2.0
-
-. /bwfefs/opt/x86_64/intel/parallel_studio_xe_2019.5.075/compilers_and_libraries_2019/linux/mkl/bin/mklvars.sh intel64
-export LD_LIBRARY_PATH=/home/kyagi/local/lib:$LD_LIBRARY_PATH
-
-export PATH=${PATH}:~/devel/genesis/genesis.gat_qmmm_qs/bin
-
+export PATH=${PATH}:/path/to/genesis/bin
 
 NIMG=16
 NAME=mep

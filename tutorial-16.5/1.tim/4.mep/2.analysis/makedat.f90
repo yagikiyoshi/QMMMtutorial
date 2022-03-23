@@ -152,7 +152,7 @@
   character(*)          :: dist
   character(len(dist))  :: distN
   character(2)          :: num
-  character(120)        :: line
+  character(1000)       :: line
   integer :: i, j
   real(8) :: aa(100)
 

@@ -1,15 +1,15 @@
 # control parameters in trj_analysis
  
 [INPUT]
-psffile = ../4.equil/step3_nvt_100.psf     # protein structure file
-reffile = ../4.equil/step3_nvt_100.pdb     # PDB file
+pdbfile        = ../../2.equil/step3_nvt_100.pdb
+psffile        = ../../2.equil/step3_nvt_100.psf
  
 [OUTPUT]
 disfile        = NAME_NUM.dis    # distance file
  
 [TRAJECTORY]
 trjfile1       = NAME_NUM.dcd    # trajectory file
-md_step1       = NSTEP           # number of MD steps
+md_step1       = 200             # number of MD steps
 mdout_period1  = 1               # MD output period
 ana_period1    = 1               # analysis period
 repeat1        = 1

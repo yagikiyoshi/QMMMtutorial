@@ -2,8 +2,8 @@
 
 [INPUT]
 rstfile        = NAME_NUM.rst
-pdbfile        = ../../2.equil/step4_nvt_100.pdb
-psffile        = ../../2.equil/step4_nvt_100.psf
+pdbfile        = ../../2.equil/step3_nvt_100.pdb
+psffile        = ../../2.equil/step3_nvt_100.psf
 
 [OUTPUT]
 pdbfile        = NAME_NUM.pdb
@@ -14,4 +14,4 @@ allow_backup   = NO              # backup existing output files (YES/NO)
 rstin_format   = GENESIS         # (NAMD/GENESIS)
 rstout_format  = PDB             # (NAMD/GENESIS/PDB/CHARMM/AMBER)
 rstout_type    = AUTO            # (AUTO/MIN/MD/REMD)
-pbc_correct    = MOLECULE        # (NO/MOLECULE)
+pbc_correct    = NO              # (NO/MOLECULE)

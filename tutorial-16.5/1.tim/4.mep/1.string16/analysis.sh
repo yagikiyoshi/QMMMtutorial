@@ -23,5 +23,10 @@ for i in `seq 1 ${NIMG}`; do
 done
 
 # get dat files
+if [ ! -e ../analysis.files/makedat ]; then
+  cd ../analysis.files
+  gfortran makedat.f90 -o makedat
+  cd ../1.string16
+fi
 ../analysis.files/makedat -output qmmm_mep.out -disout mep_{}.dis -interval 10 -basename rpath_ >& makedat.out
 

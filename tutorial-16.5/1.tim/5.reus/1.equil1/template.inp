@@ -37,6 +37,7 @@ rigid_bond      = YES           # constraints all bonds involving hydrogen
 shake_tolerance = 1.0D-10
 hydrogen_type   = BOTH
 fast_water      = YES
+noshake_index   = 4 9 10 11
 
 [ENSEMBLE]
 ensemble        = NVT           # [NVE,NVT,NPT]
@@ -48,12 +49,12 @@ type          = NOBC      # [PBC,NOBC]
 spherical_pot = yes
 
 [QMMM]
-qmtyp         = qsimulate
-qmcnt         = qsimulate.json
-workdir       = equil1_ID
-basename      = job
-qmsave_period = 500
-qmmaxtrial    = 1
+qmtyp          = qsimulate
+qmcnt          = qsimulate.json
+workdir        = equil1_ID
+basename       = job
+qmsave_period  = 500
+qmmaxtrial     = 1
 qmatm_select_index = 1
 exclude_charge = group
 
@@ -61,10 +62,44 @@ exclude_charge = group
 group1  = sid:DHA or (sid:TIMA and (rno:95 or rno:165) and \    
           not (an:CA  | an:C   | an:O   | an:N | an:HN | an:HA))
 group2  = atomno:1900 or atomno:5687 # COM of TIMA/TIMB
+group3  = atomno:1442   # NE2 of HSE95
+group4  = atomno:1443   # HE2 of HSE95
+group5  = atomno:2559   # OE1 of GLU165
+group6  = atomno:2560   # OE2 of GLU165
+group7  = atomno:7584   # O2  of DHAP   
+group8  = atomno:7585   # C3  of DHAP
+group9  = atomno:7587   # HO3 of DHAP
+group10 = atomno:7588   # H31 of DHAP
+group11 = atomno:7589   # H32 of DHAP
 
 [RESTRAINTS]
-nfunctions      = 1
-function1       = POSI
-constant1       = 10.0
-select_index1   = 2
+nfunctions    = 6
+function1     = POSI
+constant1     = 10.0
+select_index1 = 2
+
+function2     = DIST
+constant2     = 300.0
+reference2    = R1
+select_index2 = 6  10
+
+function3     = DIST
+constant3     = 300.0
+reference3    = R2
+select_index3 = 8  10
+
+function4     = DIST
+constant4     = 300.0
+reference4    = R3
+select_index4 = 5  9 
+
+function5     = DIST
+constant5     = 300.0
+reference5    = R4
+select_index5 = 7   4
+
+function6     = DIST
+constant6     = 300.0
+reference6    = R5
+select_index6 = 3  9 
 

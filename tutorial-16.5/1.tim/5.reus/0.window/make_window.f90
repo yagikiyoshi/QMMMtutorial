@@ -1,10 +1,7 @@
 
    implicit none
 
-!   integer, parameter :: nimg=16, ndim=5
    integer :: i, j, k, img, nimg, ndim
-!   real(8) :: rr(9), mep_rr(ndim,nimg), slen(nimg), ss
-!   real(8) :: coeff(4,nimg-1,ndim)
    integer, allocatable :: idx(:)
    real(8), allocatable :: mep_rr(:,:), slen(:), coeff(:,:,:)
    integer :: nw
@@ -53,7 +50,6 @@
        deallocate(arg)
      end if
    end do
-
    
    ! read MEP data
    open(10,file=datfile,status='old')
@@ -246,8 +242,6 @@
     end do
 
     do i = 1, nn-2
-!      vii(i) = 6.0_wp*(gg(i) - gg(i-1))
-!      aii(i) = 2.0_wp*(hh(i-1) + hh(i))
       vii(i) = 6.0d+00*(gg(i) - gg(i-1))
       aii(i) = 2.0d+00*(hh(i-1) + hh(i))
     end do
@@ -271,8 +265,6 @@
     do i = nn-3, 1, -1
       uii(i) = vii(i+1) - aij(i)*uii(i+1)
     end do
-!    uii(0)    = 0.0_wp
-!    uii(nn-1) = 0.0_wp
     uii(0)    = 0.0d+00
     uii(nn-1) = 0.0d+00
 
@@ -280,9 +272,6 @@
     do i = 0, nn-2
       coeff(0,i) = yy(i)
       coeff(1,i) = (yy(i+1) - yy(i))/hh(i) &
-!                 - hh(i)*(2.0_wp*uii(i) + uii(i+1))/6.0_wp
-!      coeff(2,i) = uii(i)*0.5_wp
-!      coeff(3,i) = (uii(i+1) - uii(i))/hh(i)/6.0_wp
                  - hh(i)*(2.0d+00*uii(i) + uii(i+1))/6.0d+00
       coeff(2,i) = uii(i)*0.5d+00
       coeff(3,i) = (uii(i+1) - uii(i))/hh(i)/6.0d+00

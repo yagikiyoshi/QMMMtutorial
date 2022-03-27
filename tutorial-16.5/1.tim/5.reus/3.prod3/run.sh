@@ -9,12 +9,7 @@ export MKL_NUM_THREADS=${OMP_NUM_THREADS}
 export I_MPI_PERHOST=4
 export I_MPI_DEBUG=5
 
-gfortran gen_input.f90 -o gen_input
-./gen_input 
-
-for i in `seq 1 21`; do
-  mpiexec.hydra -n 8 atdyn prod3_${i}.inp >& prod3_${i}.out
-done
+mpiexec.hydra -n 168 atdyn prod3_reus.inp >& prod3_reus.out
 
 exit 0
 

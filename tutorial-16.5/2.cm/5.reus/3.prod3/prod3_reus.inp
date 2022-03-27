@@ -5,17 +5,17 @@ strfile = toppar/toppar_water_ions.str
 psffile = ../../2.equil/step3_nvt_100.psf     # protein structure file
 pdbfile = ../../2.equil/step3_nvt_100.pdb     # protein structure file
 reffile = ../../2.equil/step3_nvt_100.pdb     # protein structure file
-rstfile = ../1.equil1/equil1_{}.rst
+rstfile = ../2.equil2/equil2_{}.rst
 
 [OUTPUT]
-logfile = equil2_{}.log                    # log file of each replica
-dcdfile = equil2_{}.dcd                    # DCD trajectory file
-remfile = equil2_{}.rem                    # parameter index file
-rstfile = equil2_{}.rst                    # restart file
+logfile = prod3_{}.log                    # log file of each replica
+dcdfile = prod3_{}.dcd                    # DCD trajectory file
+remfile = prod3_{}.rem                    # parameter index file
+rstfile = prod3_{}.rst                    # restart file
 
 [REMD]
 dimension         = 1
-exchange_period   = 0
+exchange_period   = 100
 iseed             = 3141592
 type1             = RESTRAINT
 nreplica1         = 28
@@ -33,10 +33,10 @@ vdw_force_switch = YES
 [DYNAMICS]
 integrator      = VVER          # [LEAP,VVER]
 timestep        = 0.002         # timestep (ps)
-nsteps          = 1000          # number of MD steps
-crdout_period   = 20  
-eneout_period   = 20            # energy output period
-rstout_period   = 20     
+nsteps          = 10000          # number of MD steps
+crdout_period   = 10  
+eneout_period   = 10            # energy output period
+rstout_period   = 100     
 nbupdate_period = 10
 stoptr_period   = 10
 iseed           = 20190319
@@ -60,9 +60,9 @@ spherical_pot = yes
 [QMMM]
 qmtyp          = qsimulate
 qmcnt          = qsimulate.json
-workdir        = equil2
+workdir        = prod3
 basename       = job
-qmsave_period  = 20
+qmsave_period  = 500
 qmmaxtrial     = 1
 qmatm_select_index = 1
 exclude_charge = group

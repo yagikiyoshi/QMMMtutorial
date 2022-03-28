@@ -32,6 +32,7 @@ done
 sed "s/NAME/${NAME}/g" ../analysis.files/pathcv.inp  >& aa
 sed "s/NIMG/${NIMG}/g" aa >& pathcv.inp
 pathcv_analysis pathcv.inp >& pathcv.out
+rm pathcv.inp pathcv.out aa
 
 for i in `seq 1 $NIMG`; do
   cat ${NAME}_${i}.pathcv >> all.pathcv

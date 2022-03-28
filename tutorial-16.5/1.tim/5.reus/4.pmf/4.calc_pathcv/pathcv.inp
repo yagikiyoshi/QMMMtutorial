@@ -1,0 +1,12 @@
+# control parameters in crd_convert
+ 
+[INPUT]
+pathfile = ../../0.window/win_rr.dat
+cvfile   = ../2.calc_dist/prod3_{}.dis
+ 
+[OUTPUT]
+pathcvfile = prod3_{}.pathcv
+ 
+[OPTION]
+nreplica   = 21
+

@@ -1,6 +1,5 @@
 
-#export PATH=${PATH}:/path/to/genesis/bin
-export PATH=${PATH}:/home/yagi/devel/genesis/genesis.gat_beluga/bin
+export PATH=${PATH}:/path/to/genesis/bin
 
 NIMG=21
 
@@ -26,6 +25,6 @@ done
 pathcv_analysis pathcv.inp >& pathcv.out
 
 for i in `seq 1 $NIMG`; do
-  cat equil3_${i}.pathcv >> all.pathcv
+  cat equil2_${i}.pathcv >> all.pathcv
 done
 

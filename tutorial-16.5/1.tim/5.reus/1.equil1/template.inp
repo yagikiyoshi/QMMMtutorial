@@ -17,7 +17,6 @@ electrostatic    = CUTOFF    # [CUTOFF,PME]
 switchdist       = 16.0      # switch distance
 cutoffdist       = 18.0      # cutoff distance
 pairlistdist     = 19.5      # pair-list distance
-pme_nspline      = 4
 water_model      = NONE
 vdw_force_switch = YES
 

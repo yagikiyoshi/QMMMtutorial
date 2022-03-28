@@ -1,12 +1,12 @@
 # control parameters in crd_convert
  
 [INPUT]
-pathfile = ../2.window/win_rr.dat
+pathfile = ../0.window/win_rr.dat
 cvfile   = NAME_{}.dis
  
 [OUTPUT]
 pathcvfile = NAME_{}.pathcv
  
 [OPTION]
-nreplica   = 21
+nreplica   = NIMG
 

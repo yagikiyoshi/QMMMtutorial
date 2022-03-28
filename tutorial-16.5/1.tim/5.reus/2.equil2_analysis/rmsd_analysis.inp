@@ -5,11 +5,11 @@ psffile        = ../../2.equil/step4_nvt_100.psf
 reffile        = ../../2.equil/step4_nvt_100.pdb
 
 [OUTPUT]
-rmsfile        = NAME_NUM.rms      # RMSD file
+rmsfile        = equil2_NUM.rms      # RMSD file
 
 [TRAJECTORY]
-trjfile1       = NAME_NUM.dcd   # trajectory file
-md_step1       = NSTEP           # number of MD steps
+trjfile1       = ../2.equil2/equil2_NUM.dcd   # trajectory file
+md_step1       = 100             # number of MD steps
 mdout_period1  = 1               # MD output period
 ana_period1    = 1               # analysis period
 repeat1        = 1
@@ -18,7 +18,7 @@ trj_type       = COOR            # (COOR/COOR+BOX)
 trj_natom      = 0               # (0:uses reference PDB atom count)
 
 [SELECTION]
-group1         = an:CA or an:C or an: N          # CA of backbone
+group1         = an:CA or an:C or an: N      # backbone
 
 [FITTING]
 fitting_method = TR+ROT          # NO/TR+ROT/TR/TR+ZROT/XYTR/XYTR+ZROT

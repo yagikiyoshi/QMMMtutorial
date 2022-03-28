@@ -2,11 +2,11 @@
  
 [INPUT]
 pathfile = ../0.window/win_rr.dat
-cvfile   = NAME_{}.dis
+cvfile   = equil2_{}.dis
  
 [OUTPUT]
-pathcvfile = NAME_{}.pathcv
+pathcvfile = equil2_{}.pathcv
  
 [OPTION]
-nreplica   = NIMG
+nreplica   = 21
 

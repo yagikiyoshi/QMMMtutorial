@@ -5,11 +5,11 @@ psffile = ../../2.equil/step4_nvt_100.psf
 reffile = ../../2.equil/step4_nvt_100.pdb     # PDB file
  
 [OUTPUT]
-disfile        = NAME_NUM.dis      # distance file
+disfile        = equil2_NUM.dis      # distance file
  
 [TRAJECTORY]
-trjfile1       = NAME_NUM.dcd     # trajectory file
-md_step1       = NSTEP           # number of MD steps
+trjfile1       = ../2.equil2/equil2_NUM.dcd     # trajectory file
+md_step1       = 100             # number of MD steps
 mdout_period1  = 1               # MD output period
 ana_period1    = 1               # analysis period
 repeat1        = 1

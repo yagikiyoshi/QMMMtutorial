@@ -7,7 +7,7 @@ NIMG=$(wc ../0.window/win_rr.dat |awk '{print $1}')
 for i in `seq 1 ${NIMG}`; do
   echo ${i}
 
-  # get rOH/rCH
+  # get rC1C8/rC5O2
   sed "s/NUM/${i}/g"  trj_analysis.inp >& trj_analysis${i}.inp
   trj_analysis trj_analysis${i}.inp >& trj_analysis${i}.out
   rm trj_analysis${i}.inp trj_analysis${i}.out

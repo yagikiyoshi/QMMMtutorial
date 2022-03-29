@@ -5,13 +5,13 @@ strfile = toppar/toppar_water_ions.str
 psffile = ../../2.equil/step3_nvt_100.psf     # protein structure file
 pdbfile = ../../2.equil/step3_nvt_100.pdb     # protein structure file
 reffile = ../../2.equil/step3_nvt_100.pdb     # protein structure file
-rstfile = ../2.equil2/equil3_{}.rst
+rstfile = prod3_{}.rst                    # restart file
 
 [OUTPUT]
-logfile = prod3_{}.log                    # log file of each replica
-dcdfile = prod3_{}.dcd                    # DCD trajectory file
-remfile = prod3_{}.rem                    # parameter index file
-rstfile = prod3_{}.rst                    # restart file
+logfile = prod4_{}.log                    # log file of each replica
+dcdfile = prod4_{}.dcd                    # DCD trajectory file
+remfile = prod4_{}.rem                    # parameter index file
+rstfile = prod4_{}.rst                    # restart file
 
 [REMD]
 dimension         = 1
@@ -60,7 +60,7 @@ spherical_pot = yes
 [QMMM]
 qmtyp          = qsimulate
 qmcnt          = qsimulate.json
-workdir        = prod3
+workdir        = prod4
 basename       = job
 qmsave_period  = 20
 qmmaxtrial     = 1

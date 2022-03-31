@@ -5,9 +5,9 @@ psffile = ../0.build/step2_solvator.psf  # protein structure file
 reffile = ../0.build/step2_solvator.pdb
  
 [OUTPUT]
-qmmm_crdfile   = step3_nvt_{}.crd  # CHARMM CARD file for QMMM calc.
-qmmm_psffile   = step3_nvt_{}.psf  # CHARMM PSF file for QMMM calc.
-qmmm_pdbfile   = step3_nvt_{}.pdb  # PDB file for reference of analysis
+qmmm_crdfile   = step4_nvt_{}.crd  # CHARMM CARD file for QMMM calc.
+qmmm_psffile   = step4_nvt_{}.psf  # CHARMM PSF file for QMMM calc.
+qmmm_pdbfile   = step4_nvt_{}.pdb  # PDB file for reference of analysis
  
 [TRAJECTORY]
 trjfile1       = ../1.pre_equil/step3.4_nvt.dcd      # trajectory file

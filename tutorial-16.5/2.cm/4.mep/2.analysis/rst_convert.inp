@@ -2,8 +2,8 @@
 
 [INPUT]
 rstfile        = ../1.string16/NAME_NUM.rst
-pdbfile        = ../../2.equil/step3_nvt_100.pdb
-psffile        = ../../2.equil/step3_nvt_100.psf
+pdbfile        = ../../2.equil/step4_nvt_100.pdb
+psffile        = ../../2.equil/step4_nvt_100.psf
 
 [OUTPUT]
 pdbfile        = NAME_NUM.pdb

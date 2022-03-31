@@ -1,8 +1,8 @@
 # control parameters in trj_analysis
 
 [INPUT]
-psffile = ../../../2.equil/step3_nvt_100.psf
-reffile = ../../../2.equil/step3_nvt_100.pdb     # PDB file
+psffile = ../../../2.equil/step4_nvt_100.psf
+reffile = ../../../2.equil/step4_nvt_100.pdb     # PDB file
  
 [OUTPUT]
 disfile        = prod3_NUM.dis      # distance file

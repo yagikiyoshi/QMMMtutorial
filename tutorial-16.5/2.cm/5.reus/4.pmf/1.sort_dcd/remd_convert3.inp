@@ -1,5 +1,5 @@
 [INPUT]
-reffile = ../../../2.equil/step3_nvt_100.pdb  # PDB file
+reffile = ../../../2.equil/step4_nvt_100.pdb  # PDB file
 dcdfile = ../../3.prod3/prod3_{}.dcd          # DCD file
 remfile = ../../3.prod3/prod3_{}.rem          # REMD parameter ID file
 logfile = ../../3.prod3/prod3_{}.log          # REMD energy log file

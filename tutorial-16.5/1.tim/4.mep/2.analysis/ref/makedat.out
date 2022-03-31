@@ -1,9 +1,0 @@
- MakeDat v 0.1
-
- o output   = qmmm_mep.out
- o disout   = mep_{}.dis
- o interval =   10
- o nreplica =   16
- o iter     =   93
- o nelement =   13
- o ndata    =   93

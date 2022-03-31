@@ -48,14 +48,12 @@ type          = NOBC      # [PBC,NOBC]
 spherical_pot = yes
 
 [QMMM]
-qmtyp = dftb+
-qmcnt = dftb_01.hsd
-qmexe = runDFTB02_wako.sh
-workdir    = /dev/shm/qmmm_dyn
-savedir    = qmmm11
-basename   = job
-qmsave_period = 500
-qmmaxtrial = 1
+qmtyp          = qsimulate
+qmcnt          = qsimulate.json
+workdir        = qmmm11
+basename       = job
+qmsave_period  = 500
+qmmaxtrial     = 1
 qmatm_select_index = 3
 exclude_charge = group
 

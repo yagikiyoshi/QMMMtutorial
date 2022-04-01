@@ -32,7 +32,6 @@ nsteps_micro        = 20
 
 [BOUNDARY]
 type            = NOBC           # [PBC]
-spherical_pot   = yes
 
 [QMMM]
 qmtyp              = qsimulate

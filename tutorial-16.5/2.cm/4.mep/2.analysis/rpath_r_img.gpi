@@ -20,16 +20,11 @@ set key spacing 1.4
 
 set out "rpath_r_img.pdf"
 set xrange [0:16]
-set yrange [0.6:3.0]
+set yrange [1.0:3.5]
 set encoding iso_8859_1
 set xlabel "Image number"
 set ylabel "r / \305"
 
-plot "rpath_91.dat"  u 1:4  w lp ps 0.8 t "r_1", \
-     "rpath_91.dat"  u 1:5  w lp ps 0.8 t "r_2", \
-     "rpath_91.dat"  u 1:6  w lp ps 0.8 t "r_3", \
-     "rpath_91.dat"  u 1:7  w lp ps 0.8 t "r_4", \
-     "rpath_91.dat"  u 1:8  w lp ps 0.8 t "r_5", \
-     "rpath_91.dat"  u 1:9  w lp ps 0.8 t "r_6", \
-     "rpath_91.dat"  u 1:10 w lp ps 0.8 t "r_7", \
+plot "rpath_191.dat"  u 1:4  w lp ps 0.8 t "rCC", \
+     "rpath_191.dat"  u 1:5  w lp ps 0.8 t "rCO", \
 

@@ -1,7 +1,8 @@
+#!/bin/bash
 
 export PATH=${PATH}:/path/to/genesis/bin
 
-NIMG=16
+NIMG=$(ls -l ../0.initial16/*pdb |wc -l)
 NAME=mep
 
 rm ${NAME}_*dis

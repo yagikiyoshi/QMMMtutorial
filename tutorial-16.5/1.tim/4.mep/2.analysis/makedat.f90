@@ -1,7 +1,7 @@
 
   module makedat
 
-    Integer :: nreplica, iter, nelement, ndata, intvl
+    Integer :: nreplica, iter, nelement, intvl
     real(8), allocatable :: path_length(:,:), energy(:,:), rel_energy(:,:)
     real(8), allocatable :: dist_data(:,:,:)
     character(:), allocatable :: basename
@@ -73,14 +73,11 @@
 
   call read_genesis_output(output)
   write(6,'(" o nreplica = ",i4)') nreplica
-  write(6,'(" o iter     = ",i4)') iter-1
+  write(6,'(" o iter     = ",i4)') iter
 
   if (allocated(dist)) then
     call read_dis_file(dist)
     write(6,'(" o nelement = ",i4)') nelement
-    write(6,'(" o ndata    = ",i4)') ndata-1
-  else
-    ndata = iter
   end if
 
   call print_data()
@@ -99,7 +96,7 @@
   integer        :: i, j
 
     nreplica = 0
-    iter     = 0
+    iter     = -1
 
     open(10,file=output,status='old')
     do while(.true.)
@@ -115,9 +112,9 @@
 
     10 continue
 
-    allocate(path_length(nreplica,iter))
-    allocate(energy(nreplica,iter))
-    allocate(rel_energy(nreplica,iter))
+    allocate(path_length(nreplica,0:iter))
+    allocate(energy(nreplica,0:iter))
+    allocate(rel_energy(nreplica,0:iter))
 
     rewind(10)
 
@@ -125,12 +122,12 @@
     do while(.true.)
       read(10,'(a)', end=20) line
       if (index(line,"Path Length") > 0) then 
-        j = j + 1
         read(10,*)
         do i = 1, nreplica
           read(10,'(a)') line
           read(line(10:),*) path_length(i,j), energy(i,j), rel_energy(i,j)
         end do
+        j = j + 1
 
       end if
     end do
@@ -198,7 +195,6 @@
 
       20 continue
       close(10)
-      ndata = j-1
 
     end do
 
@@ -214,23 +210,22 @@
   character(100) :: fout
   integer :: i, j, k, idx
 
+    idx=0
+    call print_to_file()
+
     if(allocated(dist_data)) then
-      do i = 1, ndata-1, intvl
-        idx = dist_data(1,i,1)
-        call print_to_file()
+      do idx = 1, iter-1, intvl
+        call print_to_file_withdis()
       end do
 
-      i   = ndata
-      idx = dist_data(1,ndata,1)
-      call print_to_file()
+      idx = iter
+      call print_to_file_withdis()
 
     else
-      do i = 1, iter-1, intvl
-        idx = i
+      do idx = 1, iter-1, intvl
         call print_to_file()
       end do
 
-      i   = iter
       idx = iter
       call print_to_file()
 
@@ -240,7 +235,22 @@
 
     subroutine print_to_file()
 
-    write(num,'(i0)') idx-1
+    write(num,'(i0)') idx
+    fout=basename//trim(num)//'.dat'
+    open(10,file=fout,status='unknown')
+    do j = 1, nreplica
+      write(10,'(i4,$)') j
+      write(10,'(f12.4,$)') path_length(j,idx)
+      write(10,'(f12.4,$)')  rel_energy(j,idx)
+      write(10,*)
+    end do
+    close(10)
+
+    end subroutine print_to_file
+
+    subroutine print_to_file_withdis()
+
+    write(num,'(i0)') idx
     fout=basename//trim(num)//'.dat'
     open(10,file=fout,status='unknown')
     do j = 1, nreplica
@@ -248,13 +258,13 @@
       write(10,'(f12.4,$)') path_length(j,idx)
       write(10,'(f12.4,$)')  rel_energy(j,idx)
       do k = 2, nelement
-        write(10,'(f12.3,$)')  dist_data(k, i, j)
+        write(10,'(f12.3,$)')  dist_data(k, idx, j)
       end do
       write(10,*)
     end do
     close(10)
 
-    end subroutine print_to_file
+    end subroutine print_to_file_withdis
 
   end subroutine
 

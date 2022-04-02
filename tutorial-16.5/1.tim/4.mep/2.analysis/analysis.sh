@@ -1,7 +1,8 @@
+#!/bin/bash
 
 export PATH=${PATH}:/path/to/genesis/bin
 
-NIMG=16
+NIMG=$(ls -l ../0.initial16/*pdb |wc -l)
 NAME=mep
 
 rm ${NAME}_*dis
@@ -9,7 +10,7 @@ rm ${NAME}_*.pdb
 for i in `seq 1 ${NIMG}`; do
   echo ${i}
 
-  # get rOH/rCH
+  # get r1 - r7
   sed "s/NAME/${NAME}/g" trj_analysis.inp  >& aa
   sed "s/NUM/${i}/g" aa  >& trj_analysis${i}.inp
   trj_analysis trj_analysis${i}.inp >& trj_analysis${i}.out

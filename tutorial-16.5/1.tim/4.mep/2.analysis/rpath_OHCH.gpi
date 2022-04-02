@@ -18,9 +18,9 @@ set yrange [1.0:1.9]
 set encoding iso_8859_1
 set xlabel "r_1(OE2-H31) / \305"
 set ylabel "r_2(C3-H31)  / \305"
-plot "rpath_0.dat"  u 4:5 w lp ps 0.8 t "Iter=0",   \
-     "rpath_10.dat" u 4:5 w lp ps 0.8 t "Iter=10", \
-     "rpath_50.dat" u 4:5 w lp ps 0.8 t "Iter=50", \
-     "rpath_90.dat" u 4:5 w lp ps 0.8 t "Iter=90", \
+plot "rpath_1.dat"  u 4:5 w lp ps 0.8 t "Iter=1",   \
+     "rpath_11.dat" u 4:5 w lp ps 0.8 t "Iter=11", \
+     "rpath_51.dat" u 4:5 w lp ps 0.8 t "Iter=51", \
+     "rpath_91.dat" u 4:5 w lp ps 0.8 t "Iter=91", \
      "data/2dsurf.table" u 1:2 w l lc rgb "gray50" t ""
 

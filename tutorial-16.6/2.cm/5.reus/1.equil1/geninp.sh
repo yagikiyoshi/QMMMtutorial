@@ -2,13 +2,9 @@
 
 name=equil1
 nimg=$(wc ../0.window/win_rr.dat |awk '{print $1}')
-#echo $nimg
 
 r1=($(cat ../0.window/win_rr.dat |awk '{print $2}'))
 r2=($(cat ../0.window/win_rr.dat |awk '{print $3}'))
-r3=($(cat ../0.window/win_rr.dat |awk '{print $4}'))
-r4=($(cat ../0.window/win_rr.dat |awk '{print $5}'))
-r5=($(cat ../0.window/win_rr.dat |awk '{print $6}'))
 
 #echo ${#r1[@]}
 #for e in ${r1[@]}; do
@@ -30,10 +26,7 @@ for id in `seq 1 $nimg`; do
   idx=$(( $id-1 ))
   sed "s/R1/${r1[$idx]}/" aa  > a1
   sed "s/R2/${r2[$idx]}/" a1  > a2
-  sed "s/R3/${r3[$idx]}/" a2  > a3
-  sed "s/R4/${r4[$idx]}/" a3  > a4
-  sed "s/R5/${r5[$idx]}/" a4  > a5
-  mv a5 ${name}_${id}.inp
-  rm aa a1 a2 a3 a4
+  mv a2 ${name}_${id}.inp
+  rm aa a1
 done
 

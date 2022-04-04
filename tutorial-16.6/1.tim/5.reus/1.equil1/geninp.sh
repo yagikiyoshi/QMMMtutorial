@@ -2,7 +2,6 @@
 
 name=equil1
 nimg=$(wc ../0.window/win_rr.dat |awk '{print $1}')
-#echo $nimg
 
 r1=($(cat ../0.window/win_rr.dat |awk '{print $2}'))
 r2=($(cat ../0.window/win_rr.dat |awk '{print $3}'))

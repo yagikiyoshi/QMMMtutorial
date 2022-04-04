@@ -4,6 +4,9 @@ export PATH=${PATH}:/path/to/genesis/bin
 
 NIMG=$(wc ../0.window/win_rr.dat |awk '{print $1}')
 
+rm *.dis
+rm *.rms
+rm *.pdb
 for i in `seq 1 ${NIMG}`; do
   echo ${i}
 
@@ -23,6 +26,7 @@ for i in `seq 1 ${NIMG}`; do
   rm rst_convert${i}.inp rst_convert${i}.out
 done
 
+rm *.pathcv
 sed "s/NREP/${NIMG}/g" pathcv.inp   >& aa
 pathcv_analysis aa >& pathcv.out
 rm aa

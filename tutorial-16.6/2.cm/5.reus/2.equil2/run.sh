@@ -9,8 +9,6 @@ export MKL_NUM_THREADS=${OMP_NUM_THREADS}
 export I_MPI_PERHOST=4
 export I_MPI_DEBUG=5
 
-./geninp.sh
-
 mpiexec.hydra -n 168 atdyn equil2_reus.inp >& equil2_reus.out
 
 exit 0

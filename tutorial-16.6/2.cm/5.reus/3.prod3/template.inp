@@ -3,22 +3,22 @@ topfile = toppar/top_all36_prot.rtf, toppar/top_all36_cgenff.rtf, toppar/cho.rtf
 parfile = toppar/par_all36_prot.prm, toppar/par_all36_cgenff.prm, toppar/cho.prm
 strfile = toppar/toppar_water_ions.str
 psffile = ../../2.equil/step4_nvt_100.psf     # protein structure file
-pdbfile = ../../2.equil/step4_nvt_100.pdb     # protein structure file
-reffile = ../../2.equil/step4_nvt_100.pdb     # protein structure file
-rstfile = ../2.equil2/equil3_{}.rst
+pdbfile = ../../2.equil/step4_nvt_100.pdb     # PDB file
+reffile = ../../2.equil/step4_nvt_100.pdb     # PDB file
+rstfile = OLDNAME_{}.rst
 
 [OUTPUT]
-logfile = prod3_{}.log                    # log file of each replica
-dcdfile = prod3_{}.dcd                    # DCD trajectory file
-remfile = prod3_{}.rem                    # parameter index file
-rstfile = prod3_{}.rst                    # restart file
+logfile = NEWNAME_{}.log                    # log file of each replica
+dcdfile = NEWNAME_{}.dcd                    # DCD trajectory file
+remfile = NEWNAME_{}.rem                    # parameter index file
+rstfile = NEWNAME_{}.rst                    # restart file
 
 [REMD]
 dimension         = 1
 exchange_period   = 100
 iseed             = 3141592
 type1             = RESTRAINT
-nreplica1         = 28
+nreplica1         = NREP
 cyclic_params1    = NO
 rest_function1    = 1 2
 
@@ -36,7 +36,7 @@ timestep        = 0.002         # timestep (ps)
 nsteps          = 2000          # number of MD steps
 crdout_period   = 10  
 eneout_period   = 10            # energy output period
-rstout_period   = 100     
+rstout_period   = 100    
 nbupdate_period = 10
 stoptr_period   = 10
 iseed           = 20190319
@@ -60,9 +60,9 @@ spherical_pot = yes
 [QMMM]
 qmtyp          = qsimulate
 qmcnt          = qsimulate.json
-workdir        = prod3
+workdir        = NEWNAME
 basename       = job
-qmsave_period  = 20
+qmsave_period  = 100
 qmmaxtrial     = 1
 qmatm_select_index = 1
 exclude_charge = group
@@ -77,12 +77,13 @@ group5  = atomno:5664   # C8  of CHA
 [RESTRAINTS]
 nfunctions    = 2
 function1     = DIST
-constant1     =  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  
-reference1    = 3.3160 3.2135 3.1093 3.0108 2.9410 2.9072 2.8661 2.8354 2.7998 2.7564 2.7067 2.6486 2.5803 2.5035 2.4233 2.3298 2.2345 2.1388 2.0234 1.9194 1.8387 1.7407 1.6681 1.6291 1.6040 1.5934 1.5882 1.5860
+constant1     = FC1
+reference1    = R1
 select_index1 = 2  5
 
 function2     = DIST
-constant2     =  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  
-reference2    = 1.5000 1.5037 1.5068 1.5323 1.5983 1.6955 1.7885 1.8875 1.9841 2.0762 2.1692 2.2527 2.3295 2.3995 2.4594 2.4969 2.5315 2.5736 2.5771 2.5988 2.6435 2.6942 2.7577 2.8523 2.9502 3.0522 3.1546 3.2570
+constant2     = FC2
+reference2    = R2
 select_index2 = 3  4
+
 

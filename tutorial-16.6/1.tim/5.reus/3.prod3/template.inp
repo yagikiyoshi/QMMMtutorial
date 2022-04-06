@@ -5,20 +5,20 @@ strfile = toppar/toppar_water_ions.str, toppar/toppar_dhap.3.str
 psffile = ../../2.equil/step4_nvt_100.psf     # protein structure file
 pdbfile = ../../2.equil/step4_nvt_100.pdb     # PDB file
 reffile = ../../2.equil/step4_nvt_100.pdb     # PDB file
-rstfile = prod3_{}.rst                    # restart file
+rstfile = OLDNAME_{}.rst
 
 [OUTPUT]
-logfile = prod4_{}.log                    # log file of each replica
-dcdfile = prod4_{}.dcd                    # DCD trajectory file
-remfile = prod4_{}.rem                    # parameter index file
-rstfile = prod4_{}.rst                    # restart file
+logfile = NEWNAME_{}.log                    # log file of each replica
+dcdfile = NEWNAME_{}.dcd                    # DCD trajectory file
+remfile = NEWNAME_{}.rem                    # parameter index file
+rstfile = NEWNAME_{}.rst                    # restart file
 
 [REMD]
 dimension         = 1
 exchange_period   = 100
 iseed             = 3141592
 type1             = RESTRAINT
-nreplica1         = 21
+nreplica1         = NREP
 cyclic_params1    = NO
 rest_function1    = 2 3 4 5 6
 
@@ -37,7 +37,7 @@ timestep        = 0.0005        # timestep (ps)
 nsteps          = 2000          # number of MD steps
 crdout_period   = 10  
 eneout_period   = 10            # energy output period
-rstout_period   = 100    
+rstout_period   = 100
 nbupdate_period = 10
 stoptr_period   = 10
 iseed           = 20190319
@@ -62,9 +62,9 @@ spherical_pot = yes
 [QMMM]
 qmtyp          = qsimulate
 qmcnt          = qsimulate.json
-workdir        = prod4
+workdir        = NEWNAME
 basename       = job
-qmsave_period  = 500
+qmsave_period  = 100
 qmmaxtrial     = 1
 qmatm_select_index = 1
 exclude_charge = group
@@ -90,27 +90,27 @@ constant1     = 10.0
 select_index1 = 2
 
 function2     = DIST
-constant2     =  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  
-reference2    = 2.5300 2.4319 2.3358 2.2408 2.1460 2.0499 1.9525 1.8535 1.7532 1.6539 1.5575 1.4695 1.3877 1.3128 1.2337 1.1677 1.1163 1.0725 1.0402 1.0232 1.0160
+constant2     = FC1
+reference2    = R1
 select_index2 = 6  10
 
 function3     = DIST
-constant3     =  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  
-reference3    = 1.0980 1.0968 1.0955 1.0949 1.0954 1.0966 1.0997 1.1050 1.1143 1.1326 1.1648 1.2168 1.2786 1.3466 1.4257 1.5066 1.5823 1.6851 1.7648 1.8377 1.8780
+constant3     = FC2
+reference3    = R2
 select_index3 = 8  10
 
 function4     = DIST
-constant4     =  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  
-reference4    = 1.7620 1.7876 1.8217 1.8600 1.8990 1.9354 1.9677 1.9953 2.0169 2.0322 2.0398 2.0439 2.0468 2.0509 2.0376 2.0380 2.0601 2.0699 2.1067 2.1675 2.2570
+constant4     = FC3
+reference4    = R3
 select_index4 = 5  9 
 
 function5     = DIST
-constant5     =  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  
-reference5    = 1.8690 1.8607 1.8560 1.8550 1.8562 1.8578 1.8585 1.8572 1.8521 1.8426 1.8282 1.8170 1.8062 1.7929 1.7883 1.7775 1.7610 1.7349 1.7122 1.6837 1.6640
+constant5     = FC4
+reference5    = R4
 select_index5 = 7   4
 
 function6     = DIST
-constant6     =  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  100.0  
-reference6    = 2.7770 2.7627 2.7516 2.7431 2.7370 2.7325 2.7305 2.7306 2.7311 2.7306 2.7286 2.7276 2.7268 2.7253 2.7289 2.7283 2.7216 2.7127 2.7040 2.6885 2.6780
+constant6     = FC5
+reference6    = R5
 select_index6 = 3  9 
 

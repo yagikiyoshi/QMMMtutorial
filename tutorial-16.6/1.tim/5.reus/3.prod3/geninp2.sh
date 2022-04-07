@@ -3,13 +3,18 @@
 if [ $# -lt 2 ]; then
   echo "USAGE: geninp.sh newname oldname"
   echo "  newname: the name of new file (NEWNAME in template.inp)"
-  echo "  newname: the name of old rstfile (OLDNAME in template.inp)"
+  echo "  oldname: the name of old rstfile (OLDNAME in template.inp)"
   exit 0
 fi
 
 newname=$1
 oldname=$2
-fc0=100.0
+
+if [ $# -lt 3 ]; then
+  fc0=100.0
+else
+  fc0=$3
+fi
 
 nimg=$(wc ../0.window/win_rr.dat |awk '{print $1}')
 #echo $nimg
@@ -34,21 +39,31 @@ done
 #echo ${r1[@]}
 
 sed "s/NREP/$nimg/" template.inp > aa
-sed "s/R1/${cr1}/" aa  > a1
-sed "s/R2/${cr2}/" a1  > a2
-sed "s/R3/${cr3}/" a2  > a3
-sed "s/R4/${cr4}/" a3  > a4
-sed "s/R5/${cr5}/" a4  > a5
-mv a5 aa
-rm a1 a2 a3 a4
-sed "s/FC1/${cfc}/" aa  > a1
-sed "s/FC2/${cfc}/" a1  > a2
-sed "s/FC3/${cfc}/" a2  > a3
-sed "s/FC4/${cfc}/" a3  > a4
-sed "s/FC5/${cfc}/" a4  > a5
-sed "s#OLDNAME#$oldname#" a5 > a6
-sed "s#NEWNAME#$newname#" a6 > a7
-mv a7 ${newname}_reus.inp
-rm aa a1 a2 a3 a4 a5 a6
+sed "s/R1/${cr1}/" aa  > bb
+mv bb aa
+sed "s/R2/${cr2}/" aa  > bb
+mv bb aa
+sed "s/R3/${cr3}/" aa  > bb
+mv bb aa
+sed "s/R4/${cr4}/" aa  > bb
+mv bb aa
+sed "s/R5/${cr5}/" aa  > bb
+mv bb aa
+sed "s/FC1/${cfc}/" aa  > bb
+mv bb aa
+sed "s/FC2/${cfc}/" aa  > bb
+mv bb aa
+sed "s/FC3/${cfc}/" aa  > bb
+mv bb aa
+sed "s/FC4/${cfc}/" aa  > bb
+mv bb aa
+sed "s/FC5/${cfc}/" aa  > bb
+mv bb aa
+sed "s#OLDNAME#$oldname#" aa > bb
+mv bb aa
+sed "s#NEWNAME#$newname#" aa > bb
+mv bb ${newname}_reus.inp
+rm aa
+
 exit 0
 

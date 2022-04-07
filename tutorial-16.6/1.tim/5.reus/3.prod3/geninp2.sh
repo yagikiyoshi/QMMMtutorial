@@ -1,9 +1,10 @@
 #!/bin/bash
 
 if [ $# -lt 2 ]; then
-  echo "USAGE: geninp.sh newname oldname"
+  echo "USAGE: geninp.sh newname oldname [fc]"
   echo "  newname: the name of new file (NEWNAME in template.inp)"
   echo "  oldname: the name of old rstfile (OLDNAME in template.inp)"
+  echo "  fc: (optional) force constant (default = 100)"
   exit 0
 fi
 

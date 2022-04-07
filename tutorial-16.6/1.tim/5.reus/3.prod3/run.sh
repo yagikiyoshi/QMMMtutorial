@@ -10,6 +10,7 @@ export I_MPI_PERHOST=4
 export I_MPI_DEBUG=5
 
 mpiexec.hydra -n 168 atdyn prod3_reus.inp >& prod3_reus.out
+mpiexec.hydra -n 168 atdyn prod4_reus.inp >& prod4_reus.out
 
 exit 0
 

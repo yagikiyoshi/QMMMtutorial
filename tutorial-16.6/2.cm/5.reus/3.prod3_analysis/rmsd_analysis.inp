@@ -1,11 +1,11 @@
 # control parameters in rmsd_analysis
 
 [INPUT]
-psffile        = ../../2.equil/step3_nvt_100.psf
-reffile        = ../../2.equil/step3_nvt_100.pdb
+psffile        = ../../2.equil/step4_nvt_100.psf
+reffile        = ../../2.equil/step4_nvt_100.pdb
 
 [OUTPUT]
-rmsfile        = prod3_NUM.rms      # RMSD file
+rmsfile        = prod4_NUM.rms      # RMSD file
 
 [TRAJECTORY]
 trjfile1       = ../3.prod3/prod3_NUM.dcd     # trajectory file

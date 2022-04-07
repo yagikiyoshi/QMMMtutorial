@@ -13,9 +13,6 @@ set ytics  font "Arial,12"
 set ytics   3
 set lmargin 8
 
-#nsteps=system("grep nsteps ../2.equil2/template.inp |awk '{print $3}'")
-#dt=system("grep timestep ../2.equil2/template.inp |awk '{print $3}'")
-#crdout=system("grep crdout_period ../2.equil2/template.inp |awk '{print $3}'")
 nrep=system("wc ../0.window/win_rr.dat |awk '{print $1}'")
 
 set xrange [0:2]

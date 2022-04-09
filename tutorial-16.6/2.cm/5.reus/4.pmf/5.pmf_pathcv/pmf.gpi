@@ -5,8 +5,8 @@ set xtics  font "Arial,12"
 set xtics 4
 set mxtics 2
 
-set xlabel "window"
-set ylabel "PMF / kcal mol-1"
+set xlabel "pathCV"
+set ylabel "PMF / kcal mol^{-1}"
 set xrange [0.0:28.0]
 set yrange [0.0:40.0]
 set bmargin 4

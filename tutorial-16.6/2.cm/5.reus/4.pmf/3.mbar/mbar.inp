@@ -10,7 +10,7 @@ weightfile     = weight{}.dat
 [MBAR]
 dimension          = 1
 num_replicas       = 28
-input_type         = CV
+input_type         = US
 tolerance          = 10E-08
 temperature        = 300.0
 target_temperature = 300.0

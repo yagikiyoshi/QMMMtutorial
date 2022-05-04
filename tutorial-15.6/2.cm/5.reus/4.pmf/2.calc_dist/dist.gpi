@@ -1,0 +1,28 @@
+set terminal pdf size 3.0,3.0
+
+set xlabel font "Arial,14"
+set xtics  font "Arial,12"
+set xtics 0.2
+set mxtics 2
+set bmargin 4
+
+set ylabel font "Arial,14"
+set ytics  font "Arial,12"
+set ytics 0.2
+set mytics 2
+set ylabel offset 1,0
+set lmargin 8
+
+set output "dist.pdf"
+set xrange [1.2:3.6]
+set yrange [1.2:3.6]
+set xlabel "r(C1-C8) / Angs"
+set ylabel "r(C5-O2) / Angs"
+
+nrep=system("wc ../../0.window/win_rr.dat |awk '{print $1}'")
+
+set multiplot
+plot for [j=1:nrep] "prod3_".j.".dis" every 5 u 2:3 pt 7 ps 0.1 w points t ""
+plot "../../0.window/win_rr.dat" u 2:3 pt 7 ps 0.5 w lp t "MEP"
+unset multiplot
+

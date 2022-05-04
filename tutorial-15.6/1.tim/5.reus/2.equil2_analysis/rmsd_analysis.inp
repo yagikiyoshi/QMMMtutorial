@@ -1,0 +1,33 @@
+# control parameters in rmsd_analysis
+
+[INPUT]
+psffile        = ../../2.equil/step4_nvt_100.psf
+reffile        = ../../2.equil/step4_nvt_100.pdb
+
+[OUTPUT]
+rmsfile        = equil2_NUM.rms      # RMSD file
+
+[TRAJECTORY]
+trjfile1       = ../2.equil2/equil2_NUM.dcd   # trajectory file
+md_step1       = 100             # number of MD steps
+mdout_period1  = 1               # MD output period
+ana_period1    = 1               # analysis period
+repeat1        = 1
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR            # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+
+[SELECTION]
+group1         = an:CA or an:C or an: N      # backbone
+
+[FITTING]
+fitting_method = TR+ROT          # NO/TR+ROT/TR/TR+ZROT/XYTR/XYTR+ZROT
+fitting_atom   = 1               # atom group
+zrot_ngrid     = 10              # number of z-rot grids
+zrot_grid_size = 1.0             # z-rot grid size
+mass_weight    = NO              # mass-weight is not applied
+
+[OPTION]
+check_only     = NO              # only checking input files (YES/NO)
+allow_backup   = NO              # backup existing output files (YES/NO)
+analysis_atom  = 1               # atom group

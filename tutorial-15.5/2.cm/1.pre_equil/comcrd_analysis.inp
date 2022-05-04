@@ -1,0 +1,36 @@
+[INPUT]
+psffile = ../0.build/step2_solvator.psf  # protein structure file
+reffile = ../0.build/step2_solvator.pdb
+
+[OUTPUT]
+trjfile        = comcrd.trj   # trajectory file
+
+[TRAJECTORY]
+trjfile1       = step3.4_nvt.dcd      # trajectory file
+md_step1       = 50000        # number of MD steps (set 1)
+mdout_period1  = 500          # MD output period   (set 1)
+ana_period1    = 500          # analysis period    (set 1)
+trj_format     = DCD          # (PDB/DCD)
+trj_type       = COOR+BOX     # (COOR/COOR+BOX)
+trj_natom      = 0            # (0:uses reference PDB atom count)
+
+[SELECTION]
+group1         = sid:PROA or sid:PROB OR sid:PROC
+
+[FITTING]
+fitting_method = NO       # NO/TR+ROT/TR/TR+ZROT/XYTR/XYTR+ZROT
+fitting_atom   = 1        # atom group
+zrot_ngrid     = 10       # number of z-rot grids
+zrot_grid_size = 1.0      # z-rot grid size
+mass_weight    = NO       # mass-weight is not applied
+
+[OPTION]
+check_only     = NO       # only checking input files (YES/NO)
+allow_backup   = NO       # backup existing output files (YES/NO)
+analysis_atom  = 1        # atom group
+analysis_for   = ALL      # analyze COM of (ALL/MOLECULE) in the selected group
+                          # ALL     : Treat the selected group as a single molecule
+                          # MOLECULE: Analyze each molecule in the selected group
+output_coord   = XYZ      # (XYZ/XY)
+output_atomno  = YES      # (YES/NO)
+pbc_correct    = NO       # (NO/MOLECULE) (MOLECULE requres psf/prmtop/grotop)

@@ -1,0 +1,27 @@
+set xlabel 'Time /ps'
+set xlabel font "Arial,14"
+set xlabel offset 0,0
+set xtics  font "Arial,12"
+set bmargin 4
+
+set ylabel 'Replica index'
+set ylabel font "Arial,14"
+set ylabel offset 0,0
+set ytics  font "Arial,12"
+set ytics   3
+set lmargin 8
+
+nsteps=system("grep nsteps ../3.prod3/prod3_reus.inp |awk '{print $3}'")
+nsteps=nsteps+system("grep nsteps ../3.prod3/prod4_reus.inp |awk '{print $3}'")
+dt=system("grep timestep ../3.prod3/prod3_reus.inp |awk '{print $3}'")
+ex=system("grep exchange_period ../3.prod3/prod3_reus.inp |awk '{print $3}'")
+nrep=system("wc ../0.window/win_rr.dat |awk '{print $1}'")
+
+set xrange [0:(nsteps*dt)]
+set yrange [0:(nrep+2)]
+
+do for [i=2:nrep+1]{
+  plot "replica_index.log" u ($0*dt*ex):i  t "parameter".(i-1)
+  pause -1
+}
+

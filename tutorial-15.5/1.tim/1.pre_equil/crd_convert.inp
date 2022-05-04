@@ -1,0 +1,34 @@
+[INPUT]
+psffile = ../0.build/step2_solvator.psf    # protein structure file
+reffile = ../0.build/step2_solvator.pdb    # PDB file
+
+[OUTPUT]
+trjfile        = step3.4_nvt_wrap.dcd # trajectory file
+ 
+[TRAJECTORY]
+trjfile1       = step3.4_nvt.dcd # trajectory file
+md_step1       = 50000           # number of MD steps
+mdout_period1  = 500             # MD output period
+ana_period1    = 10000           # analysis period
+repeat1        = 1
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR+BOX        # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[SELECTION]
+group1         = all                   # select all atoms
+group2         = sid:TIMA or sid:TIMB  # select protein atoms
+ 
+[FITTING]
+fitting_method = NO              # [NO,TR,TR+ROT,TR+ZROT,XYTR,XYTR+ZROT]
+ 
+[OPTION]
+check_only     = NO
+trjout_format  = DCD             # write DCD format
+trjout_type    = COOR+BOX
+trjout_atom    = 1               # output all atoms
+split_trjpdb   = NO
+centering      = YES             # protein is centered at the origin
+centering_atom = 2
+center_coord   = 0.0 0.0 0.0
+pbc_correct    = MOLECULE        # molecules are wrapped into the unit cell

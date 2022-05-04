@@ -1,0 +1,30 @@
+[INPUT]
+reffile = ../../../2.equil/step4_nvt_100.pdb  # PDB file
+dcdfile = ../../3.prod3/prod4_{}.dcd          # DCD file
+remfile = ../../3.prod3/prod4_{}.rem          # REMD parameter ID file
+logfile = ../../3.prod3/prod4_{}.log          # REMD energy log file
+ 
+[OUTPUT]
+pdbfile = prod4_param.pdb              # PDB file
+trjfile = prod4_param{}.dcd            # trajectory file
+logfile = prod4_param{}.log            # REMD energy log file
+ 
+[SELECTION]
+group1         = all             # selection group 1
+ 
+[FITTING]
+fitting_method = NO              # NO/TR+ROT/TR/TR+ZROT/XYTR/XYTR+ZROT
+ 
+[OPTION]
+convert_type    = PARAMETER      # (REPLICA/PARAMETER)
+convert_ids     =                # selected index (empty = all)(example: 1 2 5-10)
+num_replicas    = 28             # total number of replicas used in the simulation
+nsteps          = 2000           # nsteps in [DYNAMICS]
+exchange_period = 100            # exchange_period in [REMD]
+crdout_period   = 10             # crdout_period in [DYNAMICS]
+eneout_period   = 10             # eneout_period in [DYNAMICS]
+trjout_format   = DCD            # (PDB/DCD)
+trjout_type     = COOR           # (COOR/COOR+BOX)
+trjout_atom     = 1              # atom group
+centering       = NO             # shift center of mass (YES requres psf/prmtop/grotop)
+pbc_correct     = NO             # (NO/MOLECULE)

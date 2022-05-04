@@ -1,0 +1,29 @@
+set terminal pdf size 9.5 cm, 6.5 cm
+
+set xlabel 'Time /ps'
+set xlabel font "Arial,14"
+set xlabel offset 0,0
+set xtics  font "Arial,12"
+set bmargin 4
+
+set ylabel 'RMSD / Angs'
+set ylabel font "Arial,14"
+set ylabel offset 0,0
+set ytics  font "Arial,12"
+set lmargin 8
+
+set key font "Arial,8"
+set key bottom left
+set key maxrows 8
+
+nsteps=system("grep nsteps ../2.equil2/template.inp |awk '{print $3}'")
+dt=system("grep timestep ../2.equil2/template.inp |awk '{print $3}'")
+crdout=system("grep crdout_period ../2.equil2/template.inp |awk '{print $3}'")
+nrep=system("wc ../0.window/win_rr.dat |awk '{print $1}'")
+
+set xrange [0:(nsteps*dt)]
+set yrange [0.5:2.0]
+
+set output 'rmsd.pdf'
+plot for [j=1:nrep] "equil2_".j.".rms" u ($1*dt*crdout):2 w l t "".j
+

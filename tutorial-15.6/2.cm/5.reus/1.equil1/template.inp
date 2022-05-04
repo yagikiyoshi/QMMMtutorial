@@ -1,0 +1,76 @@
+[INPUT]
+topfile = toppar/top_all36_prot.rtf, toppar/top_all36_cgenff.rtf, toppar/cho.rtf
+parfile = toppar/par_all36_prot.prm, toppar/par_all36_cgenff.prm, toppar/cho.prm
+strfile = toppar/toppar_water_ions.str
+psffile = ../../2.equil/step4_nvt_100.psf     # protein structure file
+pdbfile = ../../2.equil/step4_nvt_100.pdb     # protein structure file
+reffile = ../../2.equil/step4_nvt_100.pdb     # protein structure file
+rstfile = ../../2.equil/step4.8_nvt.rst
+
+[OUTPUT]
+dcdfile = equil1_ID.dcd
+rstfile = equil1_ID.rst
+
+[ENERGY]
+forcefield       = CHARMM        # [CHARMM]
+electrostatic    = CUTOFF    # [CUTOFF,PME]
+switchdist       = 16.0      # switch distance
+cutoffdist       = 18.0      # cutoff distance
+pairlistdist     = 19.5      # pair-list distance
+vdw_force_switch = YES
+
+[DYNAMICS]
+integrator      = VVER          # [LEAP,VVER]
+timestep        = 0.002         # timestep (ps)
+nsteps          = 1000          # number of MD steps
+crdout_period   = 500 
+eneout_period   = 500           # energy output period
+rstout_period   = 500    
+nbupdate_period = 10
+stoptr_period   = 10
+iseed           = 20190319
+
+[CONSTRAINTS]
+rigid_bond      = YES           # constraints all bonds involving hydrogen
+shake_tolerance = 1.0D-10
+hydrogen_type   = BOTH
+fast_water      = YES
+
+[ENSEMBLE]
+ensemble        = NVT           # [NVE,NVT,NPT]
+tpcontrol       = BUSSI         # thermostat and barostat
+temperature     = 300.0         # initial temerature (K)
+
+[BOUNDARY]
+type          = NOBC      # [PBC,NOBC]
+spherical_pot = yes
+
+[QMMM]
+qmtyp          = qsimulate
+qmcnt          = qsimulate.json
+workdir        = equil1_ID
+basename       = job
+qmsave_period  = 500
+qmmaxtrial     = 1
+qmatm_select_index = 1
+exclude_charge = group
+
+[SELECTION]
+group1  = sid:CHA
+group2  = atomno:5655   # C1  of CHA  
+group3  = atomno:5660   # C5  of CHA
+group4  = atomno:5662   # O2  of CHA
+group5  = atomno:5664   # C8  of CHA
+
+[RESTRAINTS]
+nfunctions    = 2
+function1     = DIST
+constant1     = 300.0
+reference1    = R1
+select_index1 = 2  5
+
+function2     = DIST
+constant2     = 300.0
+reference2    = R2
+select_index2 = 3  4
+

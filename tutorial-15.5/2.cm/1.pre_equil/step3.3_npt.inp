@@ -1,0 +1,73 @@
+[INPUT]
+topfile = toppar/top_all36_prot.rtf, toppar/top_all36_cgenff.rtf, toppar/cho.rtf
+parfile = toppar/par_all36_prot.prm, toppar/par_all36_cgenff.prm, toppar/cho.prm
+strfile = toppar/toppar_water_ions.str
+psffile = ../0.build/step2_solvator.psf    # protein structure file
+pdbfile = ../0.build/step2_solvator.pdb    # PDB file
+reffile = ../0.build/step2_solvator.pdb    # PDB file
+rstfile = step3.2_heating.rst    # restart file
+ 
+[OUTPUT]
+rstfile = step3.3_npt.rst
+dcdfile = step3.3_npt.dcd
+
+[ENERGY]
+forcefield      = CHARMM        # [CHARMM]
+electrostatic   = PME           # [CUTOFF,PME]
+switchdist      = 10.0          # switch distance
+cutoffdist      = 12.0          # cutoff distance
+pairlistdist    = 13.5          # pair-list distance
+pme_nspline     = 4
+water_model     = NONE
+vdw_force_switch = YES
+
+[DYNAMICS]
+integrator      = VVER          # [LEAP,VVER]
+nsteps          = 50000         # number of MD steps
+timestep        = 0.002         # timestep (ps)
+crdout_period   = 500
+eneout_period   = 500           # energy output period
+rstout_period   = 1000      
+nbupdate_period = 10
+ 
+[CONSTRAINTS]
+rigid_bond      = YES           # constraints all bonds involving hydrogen
+shake_tolerance = 1.0D-10
+hydrogen_type   = BOTH
+fast_water      = YES         
+ 
+[ENSEMBLE]
+ensemble        = NPT           # [NVE,NVT,NPT]
+tpcontrol       = BUSSI         # thermostat and barostat
+temperature     = 300.0         # initial temerature (K)
+pressure        = 1.0
+
+[BOUNDARY]
+type            = PBC           # [PBC]
+
+[SELECTION]
+group1  = (sid:PROA or sid:PROB or sid:PROC) and (an:CA | an:C | an:O | an:N) # backbone
+group2  = (sid:PROA or sid:PROB or sid:PROC) and not (an:CA | an:C | an:O | an:N) and not hydrogen # sidechain
+group3  = (sid:CHA or sid:CHA around_res:3.0) and not hydrogen    # reaction center A
+group4  = (sid:CHB or sid:CHB around_res:3.0) or \
+          (sid:CHC or sid:CHC around_res:3.0) and not hydrogen    # reaction center B,C
+group5  = (sid:WATA or sid:WATB or sid:WATC) and an:OH2 # Xtal water
+
+[RESTRAINTS]
+nfunctions      = 5
+function1       = POSI
+constant1       = 10.0
+select_index1   = 1
+function2       = POSI
+constant2       = 2.0
+select_index2   = 2
+function3       = POSI
+constant3       = 2.0
+select_index3   = 3
+function4       = POSI
+constant4       = 2.0
+select_index4   = 4
+function5       = POSI
+constant5       = 2.0
+select_index5   = 5
+

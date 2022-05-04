@@ -1,0 +1,23 @@
+set term pdf size 3.0,2.4
+
+nwin=system("wc ../../0.window/win_rr.dat |awk '{print $1}'")
+binwidth=0.5
+bin(x,width)=width*floor(x/width)
+ndata=system("wc prod3_1.pathcv |awk '{print $1}'")
+
+unset key
+set grid
+set xrange [1.0:28.0]
+set yrange [0.0:0.5]
+set xlabel "Path CV"
+set ylabel "Probability"
+set xtics 4
+set mxtics 2
+#set bmargin 12
+
+set out "pathcv.pdf"
+plot for [k=1:nwin] "prod3_".k.".pathcv" u (bin($2,binwidth)):(1.0/ndata) w l smooth freq t "",\
+
+set yrange [0.0:1.0]
+set out "pathcv_all.pdf"
+plot "all.pathcv" u (bin($2,binwidth)):(1.0/ndata) w l smooth freq lc rgb "black" t ""

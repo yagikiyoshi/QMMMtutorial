@@ -1,0 +1,20 @@
+set term pdf size 20.0 cm, 20.0 cm
+
+set yrange [0.0:0.10]
+set key font "Arial,12"
+set xtic 0.5
+set ytic 0.02
+
+crd=system("grep crdout_period ../../3.prod3/prod3_reus.inp |awk '{print $3}'")
+dt=system("grep timestep ../../3.prod3/prod3_reus.inp |awk '{print $3}'")
+nwin=system("wc ../../0.window/win_rr.dat |awk '{print $1}'")
+
+set out "pathdist.pdf"
+set multiplot layout 6,4
+#set format x ''
+
+do for [j=1:nwin]{
+  plot "prod3_".j.".pathcv" u ($1*dt*crd):3 w l t "Param".j
+}
+
+unset multiplot

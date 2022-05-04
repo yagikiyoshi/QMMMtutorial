@@ -1,0 +1,19 @@
+# control parameters in pmf_analysis
+ 
+[INPUT]
+weightfile     = ../3.mbar/weight{}.dat  # weight file
+cvfile         = ../4.calc_pathcv/prod3_{}.pathcv
+distfile       = {}.pathdist
+ 
+[OUTPUT]
+pmffile        = pmf_bw15.dat      # potential of mean force file
+ 
+[OPTION]
+nreplica       = 28
+dimension      = 1
+temperature    = 300
+cutoff         = 0.02 # cutoff distance measured by pathcv_analysis
+grids1         = 1.0 28.0 101  # (min max num_of_bins)
+band_width1    = 0.15 # sigma of Gaussian kernel
+is_periodic1   = NO
+

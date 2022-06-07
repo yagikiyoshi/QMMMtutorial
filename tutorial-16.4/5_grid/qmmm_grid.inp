@@ -1,6 +1,6 @@
 [INPUT]
-topfile = ../1_setup/po4.rtf          # topology file
-parfile = ../1_setup/po4.prm          # parameter file
+topfile = ../toppar/po4.rtf           # topology file
+parfile = ../toppar/po4.prm           # parameter file
 psffile = ../1_setup/cmd_100.psf      # protein structure file
 pdbfile = ../1_setup/cmd_100.pdb      # PDB file
 rstfile = ../2_minimize/qmmm_min.rst  # restart file

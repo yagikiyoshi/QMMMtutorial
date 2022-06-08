@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd FSindo
+cd sindo-4.0/FSindo
 ./configure
 
 cd src
@@ -8,4 +8,3 @@ make
 
 cd ../../..
 
-ln -s sindo-4.0_220603 sindo-4.0

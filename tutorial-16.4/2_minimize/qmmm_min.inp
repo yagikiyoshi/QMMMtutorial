@@ -24,10 +24,9 @@ eneout_period    =   1   # energy output period
 crdout_period    =   5   # coordinates output period
 rstout_period    =   1   # restart output period
 nbupdate_period  =   1   # nonbond update period
-macro            = YES
-lbfgs_bnd_qmonly =  NO
-nsteps_micro     = 100
-fixatm_select_index = 1
+macro            = YES   # macro/micro-iteration
+nsteps_micro     = 100   # number of steps in micro-iteration
+fixatm_select_index = 1  # fixed atoms
 
 [BOUNDARY]
 type             = NOBC      # [PBC]

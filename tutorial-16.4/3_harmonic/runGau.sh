@@ -16,6 +16,7 @@ scratch=/scr/$USER
 # (optional) 
 # --- Set a chkpoint file to read initial MOs ---
 #initialchk='../path/to/initial.chk'
+initialchk='../2_minimize/qmmm_min.0/gaussian.chk'
 
 # -----------------------------------------------
 

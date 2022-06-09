@@ -26,11 +26,11 @@ type             = NOBC      # [PBC]
 
 [QMMM]
 qmtyp              = gaussian
-qmcnt              = gaussian.com
+qmcnt              = gaussian_ene.com
 qmexe              = runGau.sh
 workdir            = qmmm_grid
 basename           = job
-qmsave_period      = 20
+qmsave_period      = 10
 qmmaxtrial         = 1
 qmatm_select_index = 2
 

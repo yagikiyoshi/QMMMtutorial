@@ -30,7 +30,7 @@ qmcnt              = gaussian.com
 qmexe              = runGau.sh
 workdir            = qmmm_qff
 basename           = job
-qmsave_period      = 50
+qmsave_period      = 10
 qmmaxtrial         = 1
 qmatm_select_index = 2
 

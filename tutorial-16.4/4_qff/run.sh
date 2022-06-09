@@ -1,14 +1,15 @@
 #!/bin/bash
 
-
-export PATH=$PATH:../bin
-. ../sindo/sindo-4.0/sindovars.sh
-
-java RunMakePES -f makePES.xml >& makePES.out1
+export PATH=/path/to/genesis/bin:$PATH
 
 export OMP_NUM_THREADS=8
 export QM_NUM_THREADS=8
-mpirun -np 2 atdyn qmmm_qff.inp  > qmmm_qff.out  2>&1
 
-java RunMakePES -f makePES.xml >& makePES.out2
+# 1) Open MPI
+#
+mpirun -np 2 --map-by node:pe=${QM_NUM_THREADS} atdyn qmmm_qff.inp  > qmmm_qff.out  2>&1
+
+# 2) Intel MPI
+#
+#mpirun -np 2 -ppn 2 atdyn qmmm_qff.inp  > qmmm_qff.out  2>&1
 

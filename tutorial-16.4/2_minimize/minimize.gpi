@@ -12,7 +12,7 @@ set ytics   font "Arial,12"
 set y2tics  font "Arial,12"
 
 set ytics nomirror
-set yrange  [-418535:-418500]
+#set yrange  [-418535:-418500]
 set y2range [0:50]
 set y2tics  0, 10.0
 

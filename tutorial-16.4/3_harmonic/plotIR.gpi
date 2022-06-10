@@ -14,7 +14,7 @@ set key font "Arial,12"
 
 set yrange [0:40]
 set xrange [450:1350]
-set xtics  100
+set xtics  450, 100
 set key left
 
 set out "plotIR.pdf"

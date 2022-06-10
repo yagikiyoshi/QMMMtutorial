@@ -14,10 +14,10 @@ set key font "Arial,12"
 
 set yrange [0:40]
 set xrange [450:1350]
-set xtics  100
+set xtics  450, 100
 set key left
 
 set out "plotIR.pdf"
-plot "vqdpt-IR.spectrum" w l t "VQDPT2", \
-     "../3_harmonic/harmonic.spectrum" w l t "Harmonic"
+plot "../3_harmonic/harmonic.spectrum" w l t "Harmonic", \
+     "vqdpt-IR.spectrum" w l t "VQDPT2"
 

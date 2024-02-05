@@ -1,0 +1,47 @@
+[INPUT]
+topfile = ../toppar/po4.rtf         # topology file
+parfile = ../toppar/po4.prm         # parameter file
+psffile = ../1_setup/cmd_100.psf    # protein structure file
+pdbfile = ../1_setup/cmd_100.pdb    # PDB file
+rstfile = ../1_setup/qmmm_prod.rst  # restart file
+
+[OUTPUT]
+rstfile = qmmm_min.rst
+dcdfile = qmmm_min.dcd
+pdbfile = qmmm_min.pdb
+
+[ENERGY]
+forcefield       = CHARMM  # [CHARMM,AAGO,CAGO,KBGO,AMBER,GROAMBER,GROMARTINI]
+electrostatic    = CUTOFF  # [CUTOFF,PME]
+switchdist       = 16.0    # switch distance
+cutoffdist       = 18.0    # cutoff distance
+pairlistdist     = 19.5    # pair-list distance
+
+[MINIMIZE]
+method           = LBFGS # [SD] or [LBFGS]
+nsteps           = 500   # number of steps
+eneout_period    =   1   # energy output period
+crdout_period    =   5   # coordinates output period
+rstout_period    =   1   # restart output period
+nbupdate_period  =   1   # nonbond update period
+macro            = YES   # macro/micro-iteration
+nsteps_micro     = 100   # number of steps in micro-iteration
+fixatm_select_index = 1  # fixed atoms
+
+[BOUNDARY]
+type             = NOBC      # [PBC]
+
+[QMMM]
+qmtyp              = gaussian
+qmcnt              = gaussian.com
+qmexe              = runGau.sh
+workdir            = qmmm_min
+basename           = job
+qmsave_period      = 10
+qmmaxtrial         = 1
+qmatm_select_index = 2
+
+[SELECTION]
+group1  = not (sid:PO4 around_res: 15.0 or sid:PO4)
+group2  = sid:PO4
+

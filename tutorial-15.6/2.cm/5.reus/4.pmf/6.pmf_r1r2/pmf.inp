@@ -1,0 +1,23 @@
+# control parameters in pmf_analysis
+ 
+[INPUT]
+weightfile     = ../3.mbar/weight{}.dat  # weight file
+cvfile         = ../2.calc_dist/prod3_{}.dis
+ 
+[OUTPUT]
+pmffile        = pmf2.dat      # potential of mean force file
+ 
+[OPTION]
+nreplica       = 28
+dimension      = 2
+temperature    = 300
+output_type    = GNUPLOT
+
+grids1         = 1.2 3.6 101   # (min max num_of_bins)
+band_width1    = 0.020 # sigma of Gaussian kernel
+is_periodic1   = NO
+
+grids2         = 1.2 3.6 101   # (min max num_of_bins)
+band_width2    = 0.020 # sigma of Gaussian kernel
+is_periodic2   = NO
+

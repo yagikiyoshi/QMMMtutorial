@@ -1,0 +1,35 @@
+set terminal pdf size 3.5,3.5
+set xlabel font "Arial,14"
+set xtics  font "Arial,12"
+set xtics 0.4
+set mxtics 2
+set bmargin 4
+
+set ylabel font "Arial,14"
+set ytics  font "Arial,12"
+set ytics 0.4
+set mytics 2
+set ylabel offset 0,0
+set lmargin 4
+
+#load 'palette/reds.pal'
+set palette cubehelix start 0.5 cycles -1 saturation 3
+set output "2dsurf_mix.pdf"
+
+set cbrange [0.0:40.0]
+set xrange [1.2:3.6]
+set yrange [1.2:3.6]
+set xlabel "r(C1-C8) / Angs"
+set ylabel "r(C5-O2) / Angs"
+
+set multiplot
+
+set pm3d map
+splot "pmf2.dat" t "" 
+
+set contour base
+unset surface
+set cntrparam levels incremental 0.0,4.0,40.0
+unset key
+splot "pmf2.dat" u 1:2:3 with lines t ""
+

@@ -1,0 +1,24 @@
+# control parameters in trj_analysis
+ 
+[INPUT]
+psffile        = ../../2.equil/step4_nvt_100.psf
+reffile        = ../../2.equil/step4_nvt_100.pdb
+ 
+[OUTPUT]
+disfile        = NAME_NUM.dis    # distance file
+ 
+[TRAJECTORY]
+trjfile1       = ../1.string16/NAME_NUM.dcd    # trajectory file
+md_step1       = 200             # number of MD steps
+mdout_period1  = 1               # MD output period
+ana_period1    = 1               # analysis period
+repeat1        = 1
+trj_format     = DCD             # (PDB/DCD)
+trj_type       = COOR            # (COOR/COOR+BOX)
+trj_natom      = 0               # (0:uses reference PDB atom count)
+ 
+[OPTION]
+check_only     = NO              # only checking input files (YES/NO)
+allow_backup   = NO              # backup existing output files (YES/NO)
+distance1      = CHA:203:CHO:C1  CHA:203:CHO:C8  # C1 - C8
+distance2      = CHA:203:CHO:C5  CHA:203:CHO:O2  # C5 - O2

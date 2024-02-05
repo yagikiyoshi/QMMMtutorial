@@ -1,0 +1,28 @@
+set terminal pdf size 4.0,3.0
+
+set xlabel font "Arial,14"
+set xtics  font "Arial,12"
+set xtics 2
+set mxtics 2
+set bmargin 4
+
+set ylabel font "Arial,14"
+set ytics  font "Arial,12"
+set ytics 10
+set mytics 2
+set ylabel offset 1,0
+set lmargin 8
+set key top right
+
+set out "rpath_ene.pdf"
+set xrange [0.0:16.0]
+set yrange [-25.0:45.0]
+set xlabel "Image number"
+set ylabel "{/Symbol D}E / kcal mol^{-1}"
+plot "rpath_1.dat"  u 1:3 w lp ps 0.8 t "Iter=1", \
+     "rpath_11.dat" u 1:3 w lp ps 0.8 t "Iter=11", \
+     "rpath_51.dat" u 1:3 w lp ps 0.8 t "Iter=51", \
+     "rpath_101.dat" u 1:3 w lp ps 0.8 t "Iter=101", \
+     "rpath_151.dat" u 1:3 w lp ps 0.8 t "Iter=151", \
+     "rpath_191.dat" u 1:3 w lp ps 0.8 t "Iter=191", \
+

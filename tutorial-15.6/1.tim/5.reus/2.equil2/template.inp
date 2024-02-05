@@ -1,0 +1,116 @@
+[INPUT]
+topfile = toppar/top_all36_prot.rtf, toppar/top_all36_cgenff.rtf 
+parfile = toppar/par_all36_prot.prm, toppar/par_all36_cgenff.prm
+strfile = toppar/toppar_water_ions.str, toppar/toppar_dhap.3.str
+psffile = ../../2.equil/step4_nvt_100.psf     # protein structure file
+pdbfile = ../../2.equil/step4_nvt_100.pdb     # PDB file
+reffile = ../../2.equil/step4_nvt_100.pdb     # PDB file
+rstfile = OLDNAME_{}.rst
+
+[OUTPUT]
+logfile = NEWNAME_{}.log                    # log file of each replica
+dcdfile = NEWNAME_{}.dcd                    # DCD trajectory file
+remfile = NEWNAME_{}.rem                    # parameter index file
+rstfile = NEWNAME_{}.rst                    # restart file
+
+[REMD]
+dimension         = 1
+exchange_period   = 0
+iseed             = 3141592
+type1             = RESTRAINT
+nreplica1         = NREP
+cyclic_params1    = NO
+rest_function1    = 2 3 4 5 6
+
+[ENERGY]
+forcefield       = CHARMM        # [CHARMM]
+electrostatic    = CUTOFF    # [CUTOFF,PME]
+switchdist       = 16.0      # switch distance
+cutoffdist       = 18.0      # cutoff distance
+pairlistdist     = 19.5      # pair-list distance
+water_model      = NONE
+vdw_force_switch = YES
+
+[DYNAMICS]
+integrator      = VVER          # [LEAP,VVER]
+timestep        = 0.0005        # timestep (ps)
+nsteps          = 2000          # number of MD steps
+crdout_period   = 20  
+eneout_period   = 20            # energy output period
+rstout_period   = 20     
+nbupdate_period = 10
+stoptr_period   = 10
+iseed           = 20190319
+
+[CONSTRAINTS]
+rigid_bond      = YES           # constraints all bonds involving hydrogen
+shake_tolerance = 1.0D-10
+hydrogen_type   = BOTH
+fast_water      = YES
+noshake_index   = 4 9 10 11
+
+[ENSEMBLE]
+ensemble        = NVT           # [NVE,NVT,NPT]
+tpcontrol       = BUSSI         # thermostat and barostat
+temperature     = 300.0         # initial temerature (K)
+tau_t           = 0.5
+
+[BOUNDARY]
+type          = NOBC      # [PBC,NOBC]
+spherical_pot = yes
+
+[QMMM]
+qmtyp          = qsimulate
+qmcnt          = qsimulate.json
+workdir        = NEWNAME
+basename       = job
+qmsave_period  = 100
+qmmaxtrial     = 1
+qmatm_select_index = 1
+exclude_charge = group
+
+[SELECTION]
+group1  = sid:DHA or (sid:TIMA and (rno:95 or rno:165) and \    
+          not (an:CA  | an:C   | an:O   | an:N | an:HN | an:HA))
+group2  = atomno:1900 or atomno:5687 # COM of TIMA/TIMB
+group3  = atomno:1442   # NE2 of HSE95
+group4  = atomno:1443   # HE2 of HSE95
+group5  = atomno:2559   # OE1 of GLU165
+group6  = atomno:2560   # OE2 of GLU165
+group7  = atomno:7584   # O2  of DHAP   
+group8  = atomno:7585   # C3  of DHAP
+group9  = atomno:7587   # HO3 of DHAP
+group10 = atomno:7588   # H31 of DHAP
+group11 = atomno:7589   # H32 of DHAP
+
+[RESTRAINTS]
+nfunctions    = 6
+function1     = POSI
+constant1     = 10.0
+select_index1 = 2
+
+function2     = DIST
+constant2     = FC1
+reference2    = R1
+select_index2 = 6  10
+
+function3     = DIST
+constant3     = FC2
+reference3    = R2
+select_index3 = 8  10
+
+function4     = DIST
+constant4     = FC3
+reference4    = R3
+select_index4 = 5  9 
+
+function5     = DIST
+constant5     = FC4
+reference5    = R4
+select_index5 = 7   4
+
+function6     = DIST
+constant6     = FC5
+reference6    = R5
+select_index6 = 3  9 
+

@@ -1,0 +1,21 @@
+set terminal jpeg size 800,400
+set output 'minimize2.jpg'
+
+set xlabel  'Step'
+set ylabel  'Potential energy (kcal mol^{-1})'
+set y2label 'MAXG (kcal mol^{-1} Angs^{-1})'
+set xlabel  font "Arial,14"
+set ylabel  font "Arial,14"
+set y2label font "Arial,14"
+set xtics   font "Arial,12"
+set ytics   font "Arial,12"
+set y2tics  font "Arial,12"
+
+set ytics nomirror
+#set yrange  [-418535:-418500]
+set y2range [0:50]
+set y2tics  0, 10.0
+
+plot 'minimize.log' using 2:3 w l t 'Energy' axis x1y1, \
+     'minimize.log' using 2:5 w l t 'MAXG'   axis x1y2
+

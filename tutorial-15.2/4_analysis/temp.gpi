@@ -1,0 +1,17 @@
+#set terminal jpeg size 800,400
+#set output 'temp.jpg'
+set terminal pdf size 5.0,2.5
+set output 'temp.pdf'
+
+set xlabel  'Time (ps)'
+set ylabel  'Temperature (K)'
+set xlabel  font "Arial,14"
+set ylabel  font "Arial,14"
+set xtics   font "Arial,12"
+set ytics   font "Arial,12"
+
+set xrange  [0:100]
+set yrange  [120:320]
+
+plot 'temp.log' using ($2*0.002):13 w l t ''
+

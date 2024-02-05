@@ -1,0 +1,41 @@
+[INPUT]
+topfile = ../toppar/po4.rtf           # topology file
+parfile = ../toppar/po4.prm           # parameter file
+psffile = ../1_setup/cmd_100.psf      # protein structure file
+pdbfile = ../1_setup/cmd_100.pdb      # PDB file
+rstfile = ../2_minimize/qmmm_min.rst  # restart file
+
+[OUTPUT]
+
+[ENERGY]
+forcefield       = CHARMM  # [CHARMM,AAGO,CAGO,KBGO,AMBER,GROAMBER,GROMARTINI]
+electrostatic    = CUTOFF  # [CUTOFF,PME]
+switchdist       = 16.0    # switch distance
+cutoffdist       = 18.0    # cutoff distance
+pairlistdist     = 19.5    # pair-list distance
+
+[VIBRATION]
+runmode             = GRID
+nreplica            = 2
+vibatm_select_index = 3
+gridfile            = makeGrid.xyz
+datafile            = makeGrid.dat
+
+[BOUNDARY]
+type             = NOBC      # [PBC]
+
+[QMMM]
+qmtyp              = gaussian
+qmcnt              = gaussian_ene.com
+qmexe              = runGau.sh
+workdir            = qmmm_grid
+basename           = job
+qmsave_period      = 10
+qmmaxtrial         = 1
+qmatm_select_index = 2
+
+[SELECTION]
+group1  = not (sid:PO4 around_res: 15.0 or sid:PO4)
+group2  = sid:PO4
+group3  = sid:PO4
+

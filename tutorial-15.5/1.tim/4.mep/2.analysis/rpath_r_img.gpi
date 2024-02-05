@@ -1,0 +1,35 @@
+set terminal pdf size 4.0,2.6
+
+set xlabel font "Arial,14"
+set xtics  font "Arial,12"
+set xtics 4
+set mxtics 2
+
+set lmargin 8
+set bmargin 4
+
+set ylabel font "Arial,14"
+set ytics  font "Arial,12"
+set ytics 0.5
+set mytics 4
+set ylabel offset 1,0
+
+set key right outside
+set key maxrows 8
+set key spacing 1.4
+
+set out "rpath_r_img.pdf"
+set xrange [0:16]
+set yrange [0.6:3.0]
+set encoding iso_8859_1
+set xlabel "Image number"
+set ylabel "r / \305"
+
+plot "rpath_91.dat"  u 1:4  w lp ps 0.8 t "r_1", \
+     "rpath_91.dat"  u 1:5  w lp ps 0.8 t "r_2", \
+     "rpath_91.dat"  u 1:6  w lp ps 0.8 t "r_3", \
+     "rpath_91.dat"  u 1:7  w lp ps 0.8 t "r_4", \
+     "rpath_91.dat"  u 1:8  w lp ps 0.8 t "r_5", \
+     "rpath_91.dat"  u 1:9  w lp ps 0.8 t "r_6", \
+     "rpath_91.dat"  u 1:10 w lp ps 0.8 t "r_7", \
+

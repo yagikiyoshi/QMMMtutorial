@@ -1,0 +1,12 @@
+# control parameters in crd_convert
+ 
+[INPUT]
+pathfile = ../0.window/win_rr.dat
+cvfile   = equil2_{}.dis
+ 
+[OUTPUT]
+pathcvfile = equil2_{}.pathcv
+ 
+[OPTION]
+nreplica   = NREP
+

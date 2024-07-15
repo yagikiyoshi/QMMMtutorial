@@ -22,7 +22,7 @@ water_model     = NONE
 vdw_force_switch = YES
 
 [DYNAMICS]
-integrator      = LEAP          # [LEAP,VVER]
+integrator      = VVER          # [LEAP,VVER]
 nsteps          = 50000         # number of MD steps
 timestep        = 0.002         # timestep (ps)
 crdout_period   = 500
@@ -41,7 +41,7 @@ fast_water      = YES
  
 [ENSEMBLE]
 ensemble        = NVT           # [NVE,NVT,NPT]
-tpcontrol       = LANGEVIN      # thermostat and barostat
+tpcontrol       = BUSSI         # thermostat and barostat
 temperature     = 0.1           # initial temerature (K)
 
 [BOUNDARY]
